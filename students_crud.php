@@ -1,5 +1,6 @@
 <?php
-include_once 'header.php';
+$page_title = "Students";
+require_once 'header.php';
 $link = connect_to_db();
 
 ?>
@@ -8,7 +9,8 @@ $link = connect_to_db();
 <div class="jumbotron jumbotron-top text-center">
     <h1>STUDENTS FORM</h1>
     <p>Resize this responsive page to see the effect!</p>
-</div>-->
+</div>
+-->
 
     <div class="container">
         <p id="success"></p>

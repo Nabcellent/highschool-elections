@@ -25,7 +25,7 @@ $res_diff_pos = mysqli_query($link, $sql_diff_pos);
 $sql_form_capt = "SELECT nominators_tbl.nominee_class_id, users_tbl.user_class
                     FROM nominators_tbl 
                     INNER JOIN users_tbl on nominators_tbl.student_id = users_tbl.user_id
-                    WHERE users_tbl.user_class = '$nominator_class'";
+                    WHERE users_tbl.user_class = '$nominator_class' AND nominators_tbl.nominator_type = 'seconder'";
 $res_form_capt = mysqli_query($link, $sql_form_capt);
 
 //  Check if a class prefect already has one proposer
