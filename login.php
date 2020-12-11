@@ -1,5 +1,6 @@
 <?php
-include 'header.php';
+$page_title = "Login";
+require_once 'header.php';
 ?>
 
 <div class="container">

@@ -1,9 +1,5 @@
 $(document).ready(function () {
 
-    $(function(){
-        $("#nav-placeholder").load("navbar.php");
-    });
-
 //enable dropdown in nomination form
     $('input:radio[name="position_id"]').unbind('change').change(function() {
         var position = $('[name="position_id"]:checked').val();

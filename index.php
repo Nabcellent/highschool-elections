@@ -1,5 +1,6 @@
 <?php
-include_once 'header.php';
+$page_title = "Main";
+require_once 'header.php';
 $link = connect_to_db();
 check_session();
 ?>
@@ -10,5 +11,5 @@ check_session();
 </div>
 
 <?php
-include_once 'footer.php';
+require_once 'footer.php';
 ?>

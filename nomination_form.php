@@ -1,5 +1,8 @@
 <?php
-include_once 'header.php';
+$page_title = "Nominate";
+
+require_once 'header.php';
+
 check_session();
 
 //Check if logged in
@@ -94,7 +97,7 @@ if(isset($_SESSION["userEmail"]) && $_SESSION["userType"] == "student") {
 </div>
 
 <?php
-include_once 'footer.php';
+require_once 'footer.php';
 ?>
 
 

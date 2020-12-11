@@ -1,5 +1,6 @@
 <?php
-include_once 'header.php';
+$page_title = "Classes";
+require_once 'header.php';
 $link = connect_to_db();
 ?>
 
@@ -172,5 +173,5 @@ $link = connect_to_db();
     </div>
 
 <?php
-include_once 'footer.php';
+require_once 'footer.php';
 ?>

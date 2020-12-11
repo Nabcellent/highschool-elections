@@ -9,15 +9,6 @@ session_start();
 <head>
     <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
 
-    <!--Library scripts-->
-    <script type="text/javascript" src="js/jQuery_3.5.1.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.2/jquery.validate.min.js" integrity="sha512-UdIMMlVx0HEynClOIFSyOrPggomfhBKJE28LKl8yR3ghkgugPnG6iLfRfHwushZl1MOPSY6TsuBDGPK2X4zYKg==" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.2/additional-methods.min.js" integrity="sha512-6Uv+497AWTmj/6V14BsQioPrm3kgwmK9HYIyWP+vClykX52b0zrDGP7lajZoIY1nNlX4oQuh7zsGjmF7D0VZYA==" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap-material-design-icons@2.2.0/index.min.js"></script>
-    <script type="text/javascript" src="https://cdn.datatables.net/1.10.22/js/jquery.dataTables.min.js"></script>
-    <script src="https://cdn.datatables.net/1.10.22/js/dataTables.bootstrap4.min.js"></script>
-
     <!--Library links-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/fontawesome.min.css" integrity="sha512-kJ30H6g4NGhWopgdseRb8wTsyllFUYIx3hiUwmGAkgA9B/JbzUBDQVr2VVlWGde6sdBVOG7oU8AL35ORDuMm8g==" crossorigin="anonymous" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/google-material-design-icons@1.0.0/icons.min.css">
@@ -25,15 +16,63 @@ session_start();
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/material-icons-css@1.0.1/css/material-icons.min.css" integrity="sha256-4CYcJUqWhZSrv1tC1UJjXUcn5wqbtNuuKo2i9riH8Mo=" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.datatables.net/1.10.22/css/dataTables.bootstrap4.min.css">
 
-    <!--My scripts and links-->
-    <script type="text/javascript" src="js/form_validations.js"></script>
-    <script type="text/javascript" src="js/my_javascript.js"></script>
-    <script src="js/ajax.js"></script>
-
     <link rel="stylesheet" href="css/my_style.css" type="text/css">
+    <title>Elections - <?= $page_title ?></title>
 </head>
 <body>
+<nav id="navbar" class="navbar navbar-expand-md sticky-top navbar-dark bg-dark">
+    <a class="navbar-brand" href="index.php">S-ELECT</a>
+    <button class="navbar-toggler" data-toggle="collapse" data-target="#nav_menu">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="nav_menu">
+        <ul class="navbar-nav">
+            <li class="nav-item dropdown">
 
-<div id="nav-placeholder"></div>
+                <?php
+                if ((isset($_SESSION["userEmail"]) && $_SESSION["userType"] === "admin") || (isset($_SESSION["userEmail"]) && $_SESSION["userType"] === "standard")) {
+                    echo '<a class="nav-link dropdown-toggle" data-toggle="dropdown" data-target="#register_menu" href="#">REGISTRATION';
+                    echo '<span class="caret"></span>';
+                    echo '</a>';
+                    echo '<div class="dropdown-menu" id="register_menu">';
+                    echo '<a class="dropdown-item" href="classes_crud.php">REGISTER CLASSES</a>';
+                    echo '<a class="dropdown-item" href="positions_crud.php">REGISTER POSITION</a>';
+                    echo '<div class="dropdown-divider"></div>';
+                    echo '<a class="dropdown-item" href="students_crud.php">REGISTER STUDENT</a>';
+                }
+                ?>
+
+            </li>
+
+            <?php
+            if ((isset($_SESSION["userEmail"]) && $_SESSION["userType"] === "admin") || (isset($_SESSION["userEmail"]) && $_SESSION["userType"] === "standard")) {
+                echo '<li class="nav-item"> <a class="nav-link" href="nomination_form.php">NOMINATE</a> </li>';
+                echo '<li class="nav-item"> <a class="nav-link" href="contestants.php">CONTESTANTS</a> </li>';
+                echo '<li class="nav-item"> <a class="nav-link" href="vote.php" target="_blank">VOTE</a> </li>';
+                echo '<li class="nav-item"> <a class="nav-link" href="#">REPORT</a> </li>';
+            } else if(isset($_SESSION["userEmail"]) && $_SESSION["userType"] === "student"){
+                echo '<li class="nav-item"> <a class="nav-link" href="nomination_form.php">NOMINATE</a> </li>';
+                echo '<li class="nav-item"> <a class="nav-link" href="contestants.php">CONTESTANTS</a> </li>';
+                echo '<li class="nav-item"> <a class="nav-link" href="vote.php" target="_blank">VOTE</a> </li>';
+            }
+
+            ?>
+
+        </ul>
+        <?php
+        if (isset($_SESSION["userEmail"])) {
+            echo "<ul class='navbar-nav ml-auto'>
+                <li class='nav-item'> <a class='nav-link text-danger' href='profile.php'>Hello " . $_SESSION['userFirstName'][0] . ". " . $_SESSION['userLastName'] . "</a> </li>
+                <li class='nav-item'> <a class='nav-link' href='includes/logout.inc.php'>LOGOUT</a> </li>
+            </ul>";
+        } else {
+            echo "<ul class='navbar-nav ml-auto'>
+                <li class='nav-item'> <a class='nav-link' href='sign_up.php'>SIGN-UP</a> </li>
+                <li class='nav-item'> <a class='nav-link' href='login.php'>LOGIN</a> </li>
+            </ul>";
+        }
+        ?>
+    </div>
+</nav>
 
 <div class="wrapper">

@@ -1,5 +1,8 @@
 <?php
-include_once "header.php";
+$page_title = "Contestants";
+
+require_once "header.php";
+
 check_session();
 
 $link = connect_to_db();
@@ -213,4 +216,4 @@ $link = connect_to_db();
     </div>
 
 <?php
-include_once "footer.php";
+require_once "footer.php";
