@@ -1,0 +1,439 @@
+body {
+    color: #000058;
+    /*background: #f5f5f5;*/
+    background: url("../imgs/gaussian-blur3.jpg");
+    background-size: cover;
+}
+body hr {
+    margin-bottom: 0;
+}
+.sign {
+    margin-bottom: 10px;
+    font: italic small-caps 12px/30px Lucida Handwriting, cursive;
+}
+.frm_labels {
+    width: 100%;
+    margin: auto;
+}
+.frm_inputs {
+    width: 100%;
+    height: 1cm;
+    padding: 5px 10px;
+}
+.jumbotron-top {
+    padding: 1cm;
+    border-bottom: 2px solid #d4dde3;
+    border-radius: 0;
+}
+.has-error {
+    font-family: 'candara', sans-serif;
+    font-size: 10pt;
+    color: #f5132d;
+}
+#signup_form, #login_form {
+    width: 75%;
+    padding: 0.5cm 1cm 1cm 1cm;
+    background-color: darkgrey;
+}
+/*  NOMINATION PAGE */
+.nominate_body .double_paper {
+    width: 50%;
+    padding: 2%;
+    margin: 2% auto;
+    border: 10px solid #d4dde3;
+    box-shadow: 2px 2px 10px 1px rgba(0, 0, 0, 0.2);
+}
+#nomination_form {
+    width: 100%;
+    padding: 0.5cm 1cm;
+}
+
+.registration_form{
+    border: 2px solid maroon;
+    padding: 1cm 3cm;
+}
+
+
+/*  TABLES  */
+/*  Crud Tables CSS*/
+
+.table-wrapper {
+    background: #fff;
+    padding: 10px 15px;
+    margin: 20px 0;
+    border-radius: 3px;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, .05);
+}
+.table-title {
+    background: #435d7d;
+    color: #fff;
+    padding: 16px 30px;
+    margin: -10px -15px 0;
+    border-radius: 3px 3px 0 0;
+}
+.table-title h2 {
+    margin: 5px 0 0;
+    font-size: 24px;
+}
+.table-title .btn-group {
+    float: right;
+}
+.table-title .btn {
+    color: #fff;
+    float: right;
+    font-size: 13px;
+    border: none;
+    min-width: 50px;
+    border-radius: 2px;
+    border: none;
+    outline: none !important;
+    margin-left: 10px;
+}
+.table-title .btn i {
+    float: left;
+    font-size: 21px;
+    margin-right: 5px;
+}
+.table-title .btn span {
+    float: left;
+}
+table.table tr th{
+    width: auto;
+    border-left: 1px solid #435d7d;
+    border-right: 1px solid #435d7d;
+    border-color: #e9e9e9;
+    padding: 5px 10px;
+    vertical-align: middle;
+    border-bottom: 1px solid;
+}
+table.table tr td {
+    border-color: #e9e9e9;
+    padding: 12px 10px;
+    vertical-align: middle;
+}
+table.crud-table tr th:first-child {
+    border-left: 2px solid #f5f5f5;
+    width: 60px;
+}
+table.crud-table tr th:last-child {
+    border-right: 2px solid #f5f5f5;
+    width: 100px;
+}
+table.table-striped tbody tr:nth-of-type(odd) {
+    background-color: #fcfcfc;
+}
+table.table-striped.table-hover tbody tr:hover {
+    background: #f5f5f5;
+}
+table.table th i {
+    font-size: 13px;
+    margin: 0 5px;
+    cursor: pointer;
+}
+table.table td:last-child i {
+    opacity: 0.9;
+    font-size: 22px;
+    margin: 0 5px;
+}
+table.table td a {
+    font-weight: bold;
+    color: #566787;
+    display: inline-block;
+    text-decoration: none;
+    outline: none !important;
+}
+table.table td a.delete {
+    color: #F44336;
+}
+table.table td a:hover {
+    color: #eeb200;
+}
+table.table td i {
+    font-size: 19px;
+}
+table.table .avatar {
+    border-radius: 50%;
+    vertical-align: middle;
+    margin-right: 10px;
+}
+
+/*  User profile table  */
+table.profile-table td input {
+    border: none;
+}
+
+
+/*  DataTable   */
+.dataTables_length label {
+    font-size: 19px;
+    color: #C82333;
+    margin: 5px 0 0 0;
+}
+.dataTables_filter label {
+    font-size: 19px;
+    color: #C82333;
+    margin: 5px auto 0;
+}
+
+
+/*  pagination  */
+.pagination {
+    float: right;
+    margin: 0 0 5px;
+}
+.pagination {
+    float: right;
+    margin: 0 0 5px;
+}
+.pagination li a {
+    border: none;
+    font-size: 13px;
+    min-width: 30px;
+    min-height: 30px;
+    color: #999;
+    margin: 0 2px;
+    line-height: 30px;
+    border-radius: 2px !important;
+    text-align: center;
+    padding: 0 6px;
+}
+.pagination li a:hover {
+    color: #666;
+}
+.pagination li.active a, .pagination li.active a.page-link {
+    background: #03A9F4;
+}
+.pagination li.active a:hover {
+    background: #0397d6;
+}
+.pagination li.disabled i {
+    color: #ccc;
+}
+.pagination li i {
+    font-size: 16px;
+    padding-top: 6px
+}
+
+
+.hint-text {
+    float: left;
+    margin-top: 10px;
+    font-size: 13px;
+}
+
+
+/* Custom checkbox */
+.custom-checkbox {
+    position: relative;
+}
+.custom-checkbox input[type="checkbox"] {
+    opacity: 0;
+    position: absolute;
+    margin: 5px 0 0 3px;
+    z-index: 9;
+}
+.custom-checkbox label{
+    margin-bottom: 0;
+}
+.custom-checkbox label:before{
+    width: 18px;
+    height: 18px;
+}
+.custom-checkbox label:before {
+    content: '';
+    margin-right: 10px;
+    display: inline-block;
+    vertical-align: text-top;
+    background: white;
+    border: 1px solid #bbb;
+    border-radius: 2px;
+    box-sizing: border-box;
+    z-index: 2;
+}
+.custom-checkbox input[type="checkbox"]:checked + label:after {
+    content: '';
+    position: absolute;
+    left: 6px;
+    top: 3px;
+    width: 6px;
+    height: 11px;
+    border: solid #000;
+    border-width: 0 3px 3px 0;
+    transform: inherit;
+    z-index: 3;
+    transform: rotateZ(45deg);
+}
+.custom-checkbox input[type="checkbox"]:checked + label:before {
+    border-color: #03A9F4;
+    background: #03A9F4;
+}
+.custom-checkbox input[type="checkbox"]:checked + label:after {
+    border-color: #fff;
+}
+.custom-checkbox input[type="checkbox"]:disabled + label:before {
+    color: #b8b8b8;
+    cursor: auto;
+    box-shadow: none;
+    background: #ddd;
+}
+
+
+/*  Modal styles    */
+.modal .modal-dialog {
+    max-width: 500px;
+}
+.modal .modal-header, .modal .modal-body, .modal .modal-footer {
+    padding: 15px 20px;
+}
+.modal .modal-content {
+    border-radius: 5px;
+}
+.modal .modal-footer {
+    background: #c1c8c8;
+    border-radius: 0 0 5px 5px;
+}
+.modal .modal-title {
+    display: inline-block;
+}
+.modal .form-control {
+    border-radius: 2px;
+    box-shadow: none;
+    border-color: #dddddd;
+}
+.modal textarea.form-control {
+    resize: vertical;
+}
+.modal .btn {
+    border-radius: 2px;
+    min-width: 100px;
+}
+.modal form label {
+    margin-bottom: 0;
+    font-weight: normal;
+}
+.btn-default:hover {
+    background-color: #ffffff;
+}
+
+
+/*  Contestants */
+.card {
+    width: 30%;
+    border: 2px solid white;
+    /*border-radius: 3cm;*/
+    box-shadow: 2px 2px 10px 1px rgba(0, 0, 0, 0.2);
+    padding: 10px;
+    margin: 10px 20px;
+}
+.card hr {
+    margin: 5px 0;
+}
+.card h4 {
+    text-align: center;
+    text-decoration-line: underline;
+}
+
+.tableFixHead {
+    overflow-y: auto;
+    overflow-x: hidden;
+    max-height: 5cm;
+}
+
+.card .table td {
+    padding: 0 5px;
+}
+.card table td:last-child {
+    border-left:none;
+}
+.card table {
+    transition: all 1s ease;
+}
+.parent_row {
+    cursor: pointer;
+    font-weight: bold;
+    background-color: dimgrey;
+    color: #690000;
+}
+.child_row {
+    background-color: lightgrey;
+}
+.child_div {
+    margin-left: .7cm;
+
+    max-height: 0;
+    /*and eventually delay an overflow:auto; */
+    overflow:hidden;
+    transition: max-height 0.5s, overflow 0s;
+}
+.child_div.show {
+    /* here comes the compromise, set a max-height that would for your usual contents*/
+    max-height: 5em;
+    overflow:auto;
+    transition: max-height 0.5s, overflow 0.5s 0.5s;
+}
+.child_div .sibling {
+    padding: 0 0;
+}
+.child_div p {
+    margin: 0;
+}
+
+/*  VOTING  */
+
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    outline: none;
+    font-family: 'Poppins', sans-serif;
+}
+.vote_body{
+    background: url("../imgs/gaussian-blur3.jpg");
+    background-size: cover;
+    overflow: auto;
+}
+.vote_body .double_paper {
+    width: 60%;
+    padding: 2%;
+    border: 10px solid #d4dde3;
+    box-shadow: 2px 2px 10px 1px rgba(0, 0, 0, 0.2);
+    margin: 10% auto;
+}
+.vote_body .paper {
+    width: 100%;
+    margin: auto;
+    box-shadow: 2px 2px 10px 1px rgba(0, 0, 0, 0.2);
+}
+.vote_body .my_progress {
+    height: 20px;
+}
+.vote_body .my_progress_bar {
+    width: 12.5%;
+}
+.vote_body .my_progress_bar #progress_text {
+    font-size: 10pt;
+    font-weight: 600;
+}
+.vote_body #second, #third, #forth, #fifth, #sixth, #seventh, #success {
+    display: none;
+}
+.vote_body .vote-label {
+    font-size: 14pt;
+}
+.vote_body .list {
+    width: 50%;
+    margin: auto;
+    border: 1px solid lightgrey;
+    border-radius: 10px;
+    box-shadow: 1px 1px 7px rgba(0, 0, 0, 0.2);
+    padding: 10px 0;
+    font-size: 14pt;
+}
+.vote_body .list-menu a {
+    background-color: white;
+}
+.vote_body .list .list-menu a:hover{
+    background: linear-gradient(to right, #78250E 20%, #0E5197 30%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
