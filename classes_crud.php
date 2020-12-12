@@ -1,10 +1,11 @@
 <?php
 $page_title = "Classes";
 
-require_once 'header.php';
+require_once 'resources/templates/header.php';
 
 check_session();
 $link = connect_to_db();
+
 ?>
 
     <div class="container">
@@ -17,12 +18,12 @@ $link = connect_to_db();
                     </div>
                     <div class="col-sm-6">
                         <a href="#addClassModal" class="btn btn-success" data-toggle="modal">
-                            <i class="material-icons"></i>
+                            <i class="fas fa-plus-circle"></i>
                             <span> Add New Class</span>
                         </a>
                         <a href="JavaScript:void(0);" class="btn btn-danger" id="delete_multiple_classes">
-                            <i class="material-icons"></i>
-                            <span>Delete</span>
+                            <i class="fas fa-trash"></i>
+                            <span>Delete Multiple</span>
                         </a>
                     </div>
                 </div>
@@ -64,14 +65,14 @@ $link = connect_to_db();
                         <td><?= $row["stream_name"] ?></td>
                         <td>
                             <a href="#editClassModal" class="edit" data-toggle="modal">
-                                <i class="material-icons update-class" data-toggle="tooltip"
+                                <i class="fas fa-pen update-class" data-toggle="tooltip"
                                    data-class_id="<?= $row["class_id"] ?>"
                                    data-form_number="<?= $row["form_number"] ?>"
                                    data-stream_name="<?= $row["stream_name"] ?>"
-                                   title="Edit"></i>
+                                   title="Edit"></i>
                             </a>
                             <a href="#deleteClassModal" class="delete" data-id="<?= $row["class_id"] ?>" data-toggle="modal">
-                                <i class="material-icons" data-toggle="tooltip" title="Delete"></i>
+                                <i class="fas fa-trash" data-toggle="tooltip" title="Delete"></i>
                             </a>
                         </td>
                     </tr>
@@ -175,6 +176,10 @@ $link = connect_to_db();
         </div>
     </div>
 
+
 <?php
-require_once 'footer.php';
+require_once 'resources/templates/footer.php';
 ?>
+
+<script type="text/javascript" src="https://cdn.datatables.net/1.10.22/js/jquery.dataTables.min.js"></script>
+<script src="https://cdn.datatables.net/1.10.22/js/dataTables.bootstrap4.min.js"></script>

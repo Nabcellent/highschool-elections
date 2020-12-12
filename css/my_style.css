@@ -1,8 +1,10 @@
-body {
+html, body {
     color: #000058;
-    /*background: #f5f5f5;*/
     background: url("../imgs/gaussian-blur3.jpg");
     background-size: cover;
+    height: 100%;
+    width: 100%;
+    font-family: 'Varela Round', sans-serif;
 }
 body hr {
     margin-bottom: 0;
@@ -91,8 +93,8 @@ body hr {
 }
 .table-title .btn i {
     float: left;
-    font-size: 21px;
-    margin-right: 5px;
+    font-size: 17px;
+    margin-right: 7px;
 }
 .table-title .btn span {
     float: left;
@@ -126,13 +128,13 @@ table.table-striped.table-hover tbody tr:hover {
     background: #f5f5f5;
 }
 table.table th i {
-    font-size: 13px;
+    font-size: 12px;
     margin: 0 5px;
     cursor: pointer;
 }
 table.table td:last-child i {
     opacity: 0.9;
-    font-size: 22px;
+    font-size: 20px;
     margin: 0 5px;
 }
 table.table td a {
@@ -380,17 +382,13 @@ table.profile-table td input {
 
 /*  VOTING  */
 
-@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
-*{
-    margin: 0;
-    padding: 0;
-    outline: none;
-    font-family: 'Poppins', sans-serif;
-}
 .vote_body{
-    background: url("../imgs/gaussian-blur3.jpg");
-    background-size: cover;
-    overflow: auto;
+    background: url("../imgs/background-blur-5.jpg");
+    overflow-x: hidden;
+    height: 100%;
+    width: 100%;
+    font-family: 'Varela Round', sans-serif;
+    font-size: large;
 }
 .vote_body .double_paper {
     width: 60%;

@@ -1,6 +1,7 @@
 <?php
 $page_title = "Login";
-require_once 'header.php';
+require_once 'resources/templates/header.php';
+
 ?>
 
 <div class="container">
@@ -44,5 +45,5 @@ require_once 'header.php';
 </div>
 
 <?php
-include_once 'footer.php';
+require_once 'resources/templates/footer.php';
 ?>

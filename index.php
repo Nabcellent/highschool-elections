@@ -1,7 +1,7 @@
 <?php
 $page_title = "Main";
 
-require_once 'header.php';
+require_once 'resources/templates/header.php';
 
 check_session();
 $link = connect_to_db();
@@ -13,5 +13,4 @@ $link = connect_to_db();
 </div>
 
 <?php
-require_once 'footer.php';
-
+require_once 'resources/templates/footer.php';

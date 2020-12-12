@@ -28,20 +28,13 @@ if(isset($_SESSION["userEmail"]) && $_SESSION["userType"] == "student") {
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-    <!--    Bootstrap CSS       -->
+    <!--    Bootstrap CSS   -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
 
-    <!--    JQuery              -->
-    <script type="text/javascript" src="js/jQuery_3.5.1.js"></script>
+    <!--    Google Fonts    -->
+    <link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet">
 
-    <!--    Bootstrap Bundle    -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
-
-    <!--    My scripts and links-->
-    <script type="text/javascript" src="js/form_validations.js"></script>
-    <script type="text/javascript" src="js/my_javascript.js"></script>
-    <script src="js/ajax.js"></script>
-
+    <!--    My stylesheet   -->
     <link rel="stylesheet" href="css/my_style.css" type="text/css">
 
     <title>VOTE</title>
@@ -72,7 +65,7 @@ if(isset($_SESSION["userEmail"]) && $_SESSION["userType"] == "student") {
                                 echo "</div>";
                             }
                             ?>
-                            <b class="form-text text-danger" id="class_prefect-err"></b>
+                            <b class="form-text has-error" id="class_prefect-err"></b>
                         </div>
                         <div class="form-group">
                             <a href="#" class="btn btn-danger" id="next-1">Next</a>
@@ -228,13 +221,18 @@ if(isset($_SESSION["userEmail"]) && $_SESSION["userType"] == "student") {
     </div>
 </div>
 
+<!--    JQuery              -->
+<script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
 
-<!--    CSS only            -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/material-icons-css@1.0.1/css/material-icons.min.css" integrity="sha256-4CYcJUqWhZSrv1tC1UJjXUcn5wqbtNuuKo2i9riH8Mo=" crossorigin="anonymous">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/google-material-design-icons@1.0.0/icons.min.css">
+<!--    Bootstrap Bundle    -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+
+<!--    My scripts and links-->
+<script type="text/javascript" src="js/form_validations.js"></script>
+<script type="text/javascript" src="js/my_javascript.js"></script>
+<script src="js/ajax.js"></script>
 
 <!--    Material Icons      -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap-material-design-icons@2.2.0/index.min.js"></script>
 
 </body>
 </html>

@@ -1,5 +1,5 @@
 <?php
-require "config/db_config.php";
+require "resources/db_config.php";
 
 $link = connect_to_db();
 

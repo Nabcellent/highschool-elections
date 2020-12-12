@@ -1,7 +1,7 @@
 <?php
 $page_title = "Nominate";
 
-require_once 'header.php';
+require_once 'resources/templates/header.php';
 
 check_session();
 
@@ -97,8 +97,7 @@ if(isset($_SESSION["userEmail"]) && $_SESSION["userType"] == "student") {
 </div>
 
 <?php
-require_once 'footer.php';
-?>
+require_once 'resources/templates/footer.php';
 
 
 
