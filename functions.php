@@ -86,7 +86,7 @@ function get_nominees($position) {
     positions_tbl.position_name
     FROM `nominators_tbl`
     INNER JOIN users_tbl AS nominee ON nominators_tbl.nominee_id = nominee.user_id
-    INNER JOIN users_tbl AS nominator ON nominators_tbl.nominator_id = nominator.user_id
+    INNER JOIN users_tbl AS nominator ON nominators_tbl.student_id = nominator.user_id
     INNER JOIN classes_tbl ON nominators_tbl.nominee_class_id = classes_tbl.class_id
     INNER JOIN positions_tbl ON nominators_tbl.position_id = positions_tbl.position_id
     WHERE position_name = '$position'
