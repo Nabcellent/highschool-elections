@@ -1,6 +1,9 @@
 <?php
 $page_title = "Classes";
+
 require_once 'header.php';
+
+check_session();
 $link = connect_to_db();
 ?>
 

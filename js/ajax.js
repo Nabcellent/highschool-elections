@@ -298,7 +298,7 @@ $(document).on('click', '#delete-class', function(e) {
         success: function(dataResult){
             $('#deleteClassModal').modal('hide');
             $("#"+dataResult).remove();
-
+            location.reload();
         }
     });
 });

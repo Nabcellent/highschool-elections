@@ -1,8 +1,10 @@
 <?php
 $page_title = "Main";
+
 require_once 'header.php';
-$link = connect_to_db();
+
 check_session();
+$link = connect_to_db();
 ?>
 
 <div class="jumbotron jumbotron-top text-center">
@@ -12,4 +14,4 @@ check_session();
 
 <?php
 require_once 'footer.php';
-?>
+
