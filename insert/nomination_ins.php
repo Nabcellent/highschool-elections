@@ -22,10 +22,13 @@ $sql_diff_pos = "SELECT * FROM nominators_tbl WHERE nominee_id = '" . $_POST["no
 $res_diff_pos = mysqli_query($link, $sql_diff_pos);
 
 //  Check if form captain nominator is in different class
-$sql_form_capt = "SELECT nominators_tbl.nominee_class_id, nominators_tbl.nominator_type, users_tbl.user_class
-                    FROM nominators_tbl 
-                    INNER JOIN users_tbl on nominators_tbl.student_id = users_tbl.user_id
-                    WHERE users_tbl.user_class = '$nominator_class'";
+$sql_form_capt = "SELECT users_tbl.user_class AS nominators_class,
+                    nominators_tbl.nominator_type,
+                    nominators_tbl.nominee_id,
+                    nominators_tbl.position_id
+                    FROM heroku_10d0d80b7c8f4b3.nominators_tbl 
+                    INNER JOIN users_tbl ON nominators_tbl.student_id = users_tbl.user_id
+                    WHERE nominators_tbl.position_id = '7' AND nominator_type = 'seconder' AND nominators_tbl.nominee_id= '$nominee_id' AND user_class = '$nominator_class'";
 $res_form_capt = mysqli_query($link, $sql_form_capt);
 
 //  Check if a class prefect already has one proposer
@@ -55,7 +58,7 @@ if(mysqli_num_rows($res_Same_pos) > 0) {
         } else {
             addToDatabase();
         }
-    } else if($position_id == "7" && mysqli_num_rows($res_form_capt) > 0 && $nominator_type == "seconder") {
+    } else if(mysqli_num_rows($res_form_capt) > 0) {
         echo "This student already has a seconder from this class";
     } else if($nominator_type == "proposer" && $count_res["duplicates"] == "2") {
         echo "This student already has enough proposers";
