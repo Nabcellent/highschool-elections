@@ -45,7 +45,7 @@ function get_classes_details() {
 }
 function get_nominee_class($form_number) {
     $link = connect_to_db();
-    $query = mysqli_query($link, "SELECT * FROM classes_tbl WHERE form_number = '$form_number'");
+    $query = mysqli_query($link, "SELECT * FROM classes_tbl WHERE form_number = '$form_number' ORDER BY stream_name");
     $classes_arr = array();
 
     while($row = mysqli_fetch_array($query)) {

@@ -1,8 +1,11 @@
 <?php
 $page_title = "Students";
+
 require_once 'header.php';
+
 $link = connect_to_db();
 
+check_session();
 ?>
 
 <!--
