@@ -5,8 +5,6 @@ require_once 'resources/templates/header.php';
 
 check_session();
 
-$link = connect_to_db();
-
 ?>
 
     <div class="container-fluid">
