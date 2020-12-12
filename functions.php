@@ -147,18 +147,22 @@ function get_class_lvl_candidates($class_id) {
        users_tbl.user_last_name,
        classes_tbl.form_number,
        classes_tbl.stream_name,
-       positions_tbl.position_name
-    FROM `nominators_tbl`
+       positions_tbl.position_name,
+       COUNT(nominators_tbl.nominee_id)
+    FROM nominators_tbl
     INNER JOIN users_tbl ON nominators_tbl.nominee_id = users_tbl.user_id
     INNER JOIN classes_tbl ON nominators_tbl.nominee_class_id = classes_tbl.class_id
     INNER JOIN positions_tbl ON nominators_tbl.position_id = positions_tbl.position_id
     WHERE nominators_tbl.nominee_class_id = '$class_id' AND position_name = 'class prefect'
-    GROUP BY nominee_id";
+    GROUP BY nominee_id
+    HAVING COUNT(nominators_tbl.nominee_id) = 3";
 
     $query = mysqli_query($link, $sql);
 
-    while($row = mysqli_fetch_array($query)) {
-        $candidates[] = $row;
+    if(mysqli_num_rows($query) > 0) {
+        while($row = mysqli_fetch_array($query)) {
+            $candidates[] = $row;
+        }
     }
 
     return $candidates;
@@ -174,18 +178,22 @@ function get_form_lvl_candidates($form_number) {
        users_tbl.user_last_name,
        classes_tbl.form_number,
        classes_tbl.stream_name,
-       positions_tbl.position_name
+       positions_tbl.position_name,
+    COUNT(nominators_tbl.nominee_id)
     FROM `nominators_tbl`
     INNER JOIN users_tbl ON nominators_tbl.nominee_id = users_tbl.user_id
     INNER JOIN classes_tbl ON nominators_tbl.nominee_class_id = classes_tbl.class_id
     INNER JOIN positions_tbl ON nominators_tbl.position_id = positions_tbl.position_id
     WHERE form_number = '$form_number' AND position_name = 'form captain'
-    GROUP BY nominee_id";
+    GROUP BY nominee_id
+    HAVING COUNT(nominators_tbl.nominee_id) = 7";
 
     $query = mysqli_query($link, $sql);
 
-    while($row = mysqli_fetch_array($query)) {
-        $candidates[] = $row;
+    if(mysqli_num_rows($query) > 0) {
+        while($row = mysqli_fetch_array($query)) {
+            $candidates[] = $row;
+        }
     }
 
     return $candidates;
@@ -201,18 +209,22 @@ function get_sch_lvl_candidates($position) {
        users_tbl.user_last_name,
        classes_tbl.form_number,
        classes_tbl.stream_name,
-       positions_tbl.position_name
+       positions_tbl.position_name,
+    COUNT(nominators_tbl.nominee_id)
     FROM `nominators_tbl`
     INNER JOIN users_tbl ON nominators_tbl.nominee_id = users_tbl.user_id
     INNER JOIN classes_tbl ON nominators_tbl.nominee_class_id = classes_tbl.class_id
     INNER JOIN positions_tbl ON nominators_tbl.position_id = positions_tbl.position_id
     WHERE position_name = '$position'
-    GROUP BY nominee_id";
+    GROUP BY nominee_id
+    HAVING COUNT(nominators_tbl.nominee_id) = 7";
 
     $query = mysqli_query($link, $sql);
 
-    while($row = mysqli_fetch_array($query)) {
-        $candidates[] = $row;
+    if(mysqli_num_rows($query) > 0) {
+        while($row = mysqli_fetch_array($query)) {
+            $candidates[] = $row;
+        }
     }
 
     return $candidates;
