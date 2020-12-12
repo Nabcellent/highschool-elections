@@ -12,18 +12,6 @@ function check_session() {
 
 ////    GET DATABASE DETAILS    ////////////////////////////////////////////////////////////////////////////////////////
 
-function get_student_details() {
-    $link = connect_to_db();
-    $query = mysqli_query($link, "SELECT * FROM users_tbl WHERE user_type = 'student'");
-    $students_arr = array();
-
-    while ($row = mysqli_fetch_array($query)) {
-        $students_arr[] = $row;
-    }
-
-    return $students_arr;
-}
-
 function get_classes_details() {
     $link = connect_to_db();
     $query = mysqli_query($link, "SELECT * FROM classes_tbl WHERE form_number != 0 ORDER BY form_number, stream_name");

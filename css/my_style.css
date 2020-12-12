@@ -1,6 +1,8 @@
 html, body {
-    color: #000058;
-    background: url("../imgs/gaussian-blur3.jpg");
+    background: url("../imgs/background-blur-5.jpg") no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
     background-size: cover;
     height: 100%;
     width: 100%;
@@ -318,7 +320,7 @@ table.profile-table td input {
 }
 
 
-/*  Contestants */
+/*=======   CONTESTANTS PAGE   =======*/
 .card {
     width: 30%;
     border: 2px solid white;
@@ -352,8 +354,8 @@ table.profile-table td input {
 }
 .parent_row {
     cursor: pointer;
-    font-weight: bold;
-    background-color: dimgrey;
+    font-weight: 500;
+    background-color: lightgrey;
     color: #690000;
 }
 .child_row {
@@ -383,7 +385,7 @@ table.profile-table td input {
 /*  VOTING  */
 
 .vote_body{
-    background: url("../imgs/background-blur-5.jpg");
+    background: url("../imgs/gaussian-blur3.jpg");
     overflow-x: hidden;
     height: 100%;
     width: 100%;
@@ -415,8 +417,15 @@ table.profile-table td input {
 .vote_body #second, #third, #forth, #fifth, #sixth, #seventh, #success {
     display: none;
 }
+.vote_body form h4 {
+    text-transform: uppercase;
+    color: #0E73B7;
+}
 .vote_body .vote-label {
-    font-size: 14pt;
+    font-size: 16pt;
+}
+.vote_body .success_note {
+    color: #7F270D;
 }
 .vote_body .list {
     width: 50%;

@@ -52,7 +52,7 @@ if(isset($_SESSION["userEmail"]) && $_SESSION["userType"] == "student") {
                 <form action="" method="POST" id="voting_form">
                     <!--    CLASS PREFECT   -->
                     <div id="first">
-                        <h4 class="text-center p-1 rounded text-dark">Class Prefect</h4>
+                        <h4 class="text-center p-1">Class Prefect</h4>
                         <hr style="margin: 0 0 1cm">
                         <div class="form-group">
                             <input type="number" name="voter_id" value="<?=$voter_id?>" hidden>
@@ -74,7 +74,7 @@ if(isset($_SESSION["userEmail"]) && $_SESSION["userType"] == "student") {
 
                     <!--    FORM CAPTAIN    -->
                     <div id="second">
-                        <h4 class="text-center p-1 rounded text-dark">Form Captain</h4>
+                        <h4 class="text-center p-1">Form Captain</h4>
                         <hr style="margin: 0 0 1cm">
                         <div class="form-group">
                             <label class="vote-label" for="student_name">Vote for your Form Captain</label>
@@ -86,7 +86,7 @@ if(isset($_SESSION["userEmail"]) && $_SESSION["userType"] == "student") {
                                 echo "</div>";
                             }
                             ?>
-                            <b class="form-text text-danger" id="form_capt-err"></b>
+                            <b class="form-text has-error" id="form_capt-err"></b>
                         </div>
                         <div class="form-group">
                             <a href="#" class="btn btn-danger" id="prev-2">Previous</a>
@@ -96,7 +96,7 @@ if(isset($_SESSION["userEmail"]) && $_SESSION["userType"] == "student") {
 
                     <!--    LIBRARY CAPTAIN-->
                     <div id="third">
-                        <h4 class="text-center p-1 rounded text-dark">Library Captain</h4>
+                        <h4 class="text-center p-1">Library Captain</h4>
                         <hr style="margin: 0 0 1cm">
                         <div class="form-group">
                             <label class="vote-label" for="student_name">Vote for your Library Captain</label>
@@ -108,7 +108,7 @@ if(isset($_SESSION["userEmail"]) && $_SESSION["userType"] == "student") {
                                 echo "</div>";
                             }
                             ?>
-                            <b class="form-text text-danger" id="lib_capt-err"></b>
+                            <b class="form-text has-error" id="lib_capt-err"></b>
                         </div>
                         <div class="form-group">
                             <a href="#" class="btn btn-danger" id="prev-3">Previous</a>
@@ -118,7 +118,7 @@ if(isset($_SESSION["userEmail"]) && $_SESSION["userType"] == "student") {
 
                     <!--    GAMES CAPTAIN   -->
                     <div id="forth">
-                        <h4 class="text-center p-1 rounded text-dark">Games Captain</h4>
+                        <h4 class="text-center p-1">Games Captain</h4>
                         <hr style="margin: 0 0 1cm">
                         <div class="form-group">
                             <label class="vote-label" for="student_name">Vote for your Games Captain</label>
@@ -140,7 +140,7 @@ if(isset($_SESSION["userEmail"]) && $_SESSION["userType"] == "student") {
 
                     <!--    DINING HALL CAPTAIN -->
                     <div id="fifth">
-                        <h4 class="text-center p-1 rounded text-dark">Dining Hall Captain</h4>
+                        <h4 class="text-center p-1">Dining Hall Captain</h4>
                         <hr style="margin: 0 0 1cm">
                         <div class="form-group">
                             <label class="vote-label" for="student_name">Vote for your DiningHall Captain</label>
@@ -152,7 +152,7 @@ if(isset($_SESSION["userEmail"]) && $_SESSION["userType"] == "student") {
                                 echo "</div>";
                             }
                             ?>
-                            <b class="form-text text-danger" id="dh_capt-err"></b>
+                            <b class="form-text has-error" id="dh_capt-err"></b>
                         </div>
                         <div class="form-group">
                             <a href="#" class="btn btn-danger" id="prev-5">Previous</a>
@@ -162,7 +162,7 @@ if(isset($_SESSION["userEmail"]) && $_SESSION["userType"] == "student") {
 
                     <!--    HEAD GIRL   -->
                     <div id="sixth">
-                        <h4 class="text-center p-1 rounded text-dark">Head Girl</h4>
+                        <h4 class="text-center p-1">Head Girl</h4>
                         <hr style="margin: 0 0 1cm">
                         <div class="form-group">
                             <label class="vote-label" for="student_name">Vote for your Head Girl</label>
@@ -174,7 +174,7 @@ if(isset($_SESSION["userEmail"]) && $_SESSION["userType"] == "student") {
                                 echo "</div>";
                             }
                             ?>
-                            <b class="form-text text-danger" id="head_girl-err"></b>
+                            <b class="form-text has-error" id="head_girl-err"></b>
                         </div>
                         <div class="form-group">
                             <a href="#" class="btn btn-danger" id="prev-6">Previous</a>
@@ -184,7 +184,7 @@ if(isset($_SESSION["userEmail"]) && $_SESSION["userType"] == "student") {
 
                     <!--    HEAD BOY    -->
                     <div id="seventh">
-                        <h4 class="text-center p-1 rounded text-dark">Head Boy</h4>
+                        <h4 class="text-center p-1">Head Boy</h4>
                         <hr style="margin: 0 0 1cm">
                         <div class="form-group">
                             <label class="vote-label" for="student_name">Vote for your Head Boy</label>
@@ -196,7 +196,7 @@ if(isset($_SESSION["userEmail"]) && $_SESSION["userType"] == "student") {
                                 echo "</div>";
                             }
                             ?>
-                            <b class="form-text text-danger" id="head_boy-err"></b>
+                            <b class="form-text has-error" id="head_boy-err"></b>
                         </div>
                         <div class="form-group">
                             <a href="#" class="btn btn-danger" id="prev-7">Previous</a>
@@ -204,7 +204,7 @@ if(isset($_SESSION["userEmail"]) && $_SESSION["userType"] == "student") {
                         </div>
                     </div>
                     <div id="success">
-                        <h4 class="text-center p-1 rounded text-dark success_note"></h4>
+                        <h4 class="text-center p-1 success_note"></h4>
                         <hr style="margin: 0 0 1cm">
                         <div class="list">
                             <div class="list-menu" id="action">
