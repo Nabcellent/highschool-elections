@@ -59,8 +59,10 @@ if(isset($_SESSION["userEmail"]) && $_SESSION["userType"] == "student") {
                             $position = get_positions_details($user_FormNumber);
 
                             foreach ($position as $row) {
-                                echo "<input class='mr-2' type='radio' name='position_id' value='$row[position_id]'>";
-                                echo "<label>$row[position_name]</label><br>";
+                                echo "<div class='form-check form-check'>";
+                                echo "<input class='form-check-input' type='radio' name='position_id' value='$row[position_id]'>";
+                                echo "<label class='form-check-label'>$row[position_name]</label><br>";
+                                echo "</div>";
                             }
                             ?>
 

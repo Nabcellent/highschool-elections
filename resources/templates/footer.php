@@ -1,6 +1,11 @@
-<hr style="border-color: #d4dde3">
+
 <div class="text-right">
-    <p class="sign">@Lè_•Çapuchôn✓🩸</p>
+    <hr class="bg-light">
+    <footer>
+        <div class="text-light">
+            <p class="sign">@Lè_•Çapuchôn✓🩸</p>
+        </div>
+    </footer>
 </div>
 </div>
 

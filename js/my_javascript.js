@@ -14,7 +14,7 @@ $(document).ready(function () {
 
             if(position !== ""){
                 $.ajax({
-                    url: "nominee_select.php",
+                    url: "../fetch/fetch_nominees.php",
                     data: {
                         position: position,
                         form_number:form_number,
@@ -42,7 +42,7 @@ $(document).ready(function () {
 
                 if(position !== ""){
                     $.ajax({
-                        url: "nominee_select.php",
+                        url: "../fetch/fetch_nominees.php",
                         data: {
                             position: position,
                             form_number:form_number,
