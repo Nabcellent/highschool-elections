@@ -24,7 +24,7 @@ function get_results($param, $level) {
                 FROM vote_tbl
                 INNER JOIN users_tbl ON vote_tbl.class_prefect_id = users_tbl.user_id
                 INNER JOIN classes_tbl ON users_tbl.user_class = classes_tbl.class_id
-                WHERE form_number = 1 AND stream_name = 'venus'
+                WHERE form_number = '$param[0]' AND stream_name = '$param[1]'
                 GROUP BY class_prefect_id";
     }
 

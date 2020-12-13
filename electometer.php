@@ -38,7 +38,7 @@ check_session();
                         <h3 class="text-center">CLASS LEVEL</h3>
                     </div>
                 </div>
-                <div class="row justify-content-center bg-dark text-light text-center">
+                <div class="row justify-content-center bg-dark text-light text-center px-4">
                     <div class="col-md-6 p-2">
                         <h4>FORM 1 CLASS PREFECT</h4>
                         <hr class="my-2 bg-light">
@@ -83,38 +83,38 @@ check_session();
                             <div class="col-md-6">
                                 <h5>2 EARTH</h5>
                                 <hr class="my-2 mx-auto bg-light w-75">
-                                <div class="text-left" id="class_prefect_id"></div>
+                                <div class="text-left" id="2_E_id"></div>
                             </div>
                             <div class="col-md-6">
                                 <h5>2 JUPITER</h5>
                                 <hr class="my-2 mx-auto bg-light w-75">
-                                <div class="text-left" id="class_prefect_id"></div>
+                                <div class="text-left" id="2_J_id"></div>
                             </div>
                         </div>
                         <div class="row">
                             <div class="col-md-6">
                                 <h5>2 MARS</h5>
                                 <hr class="my-2 mx-auto bg-light w-75">
-                                <div class="text-left" id="class_prefect_id"></div>
+                                <div class="text-left" id="2_M_id"></div>
                             </div>
                             <div class="col-md-6">
                                 <h5>2 NEPTUNE</h5>
                                 <hr class="my-2 mx-auto bg-light w-75">
-                                <div class="text-left" id="class_prefect_id"></div>
+                                <div class="text-left" id="2_N_id"></div>
                             </div>
                         </div>
                         <div class="row justify-content-center">
                             <div class="col-md-6">
                                 <h5>2 VENUS</h5>
                                 <hr class="my-2 mx-auto bg-light w-75">
-                                <div class="text-left" id="class_prefect_id"></div>
+                                <div class="text-left" id="2_V_id"></div>
                             </div>
                         </div>
                     </div>
                 </div>
 
 
-                <div class="row justify-content-center bg-light text-dark text-center">
+                <div class="row justify-content-center bg-light text-dark text-center px-4">
 
                     <!--    Form 3 Class Prefect    -->
                     <div class="col-md-6 p-2">
@@ -124,31 +124,31 @@ check_session();
                             <div class="col-md-6">
                                 <h5>3 EARTH</h5>
                                 <hr class="my-2 mx-auto bg-dark w-75">
-                                <div class="text-left" id="class_prefect_id"></div>
+                                <div class="text-left" id="3_E_id"></div>
                             </div>
                             <div class="col-md-6">
                                 <h5>3 JUPITER</h5>
                                 <hr class="my-2 mx-auto bg-dark w-75">
-                                <div class="text-left" id="class_prefect_id"></div>
+                                <div class="text-left" id="3_J_id"></div>
                             </div>
                         </div>
                         <div class="row">
                             <div class="col-md-6">
                                 <h5>3 MARS</h5>
                                 <hr class="my-2 mx-auto bg-dark w-75">
-                                <div class="text-left" id="class_prefect_id"></div>
+                                <div class="text-left" id="3_M_id"></div>
                             </div>
                             <div class="col-md-6">
                                 <h5>3 NEPTUNE</h5>
                                 <hr class="my-2 mx-auto bg-dark w-75">
-                                <div class="text-left" id="class_prefect_id"></div>
+                                <div class="text-left" id="3_N_id"></div>
                             </div>
                         </div>
                         <div class="row justify-content-center">
                             <div class="col-md-6">
                                 <h5>3 VENUS</h5>
                                 <hr class="my-2 mx-auto bg-dark w-75">
-                                <div class="text-left" id="class_prefect_id"></div>
+                                <div class="text-left" id="3_V_id"></div>
                             </div>
                         </div>
                     </div>
@@ -156,36 +156,36 @@ check_session();
                     <!--    Form 4 Class Prefect    -->
                     <div class="col-md-6 p-2">
                         <h4>FORM 4 CLASS PREFECT</h4>
-                        <hr class="my-2 bg-light">
+                        <hr class="my-2 bg-dark">
                         <div class="row">
                             <div class="col-md-6">
                                 <h5>4 EARTH</h5>
                                 <hr class="my-2 mx-auto bg-dark w-75">
-                                <div class="text-left" id="class_prefect_id"></div>
+                                <div class="text-left" id="4_E_id"></div>
                             </div>
                             <div class="col-md-6">
                                 <h5>4 JUPITER</h5>
                                 <hr class="my-2 mx-auto bg-dark w-75">
-                                <div class="text-left" id="class_prefect_id"></div>
+                                <div class="text-left" id="4_J_id"></div>
                             </div>
                         </div>
                         <div class="row">
                             <div class="col-md-6">
                                 <h5>4 MARS</h5>
                                 <hr class="my-2 mx-auto bg-dark w-75">
-                                <div class="text-left" id="class_prefect_id"></div>
+                                <div class="text-left" id="4_M_id"></div>
                             </div>
                             <div class="col-md-6">
                                 <h5>4 NEPTUNE</h5>
                                 <hr class="my-2 mx-auto bg-dark w-75">
-                                <div class="text-left" id="class_prefect_id"></div>
+                                <div class="text-left" id="4_N_id"></div>
                             </div>
                         </div>
                         <div class="row justify-content-center">
                             <div class="col-md-6">
                                 <h5>4 VENUS</h5>
                                 <hr class="my-2 mx-auto bg-dark w-75">
-                                <div class="text-left" id="class_prefect_id"></div>
+                                <div class="text-left" id="4_V_id"></div>
                             </div>
                         </div>
                     </div>
@@ -285,12 +285,18 @@ include_once "resources/templates/footer.php";
 
 <script>
     $(document).ready(function() {
+        fetch_class_poll_data();
         fetch_sch_poll_data();
         fetch_form_poll_data();
 
-
         var school_results = ['#head_boy_id', '#head_girl_id', '#dh_capt_id', '#games_capt_id', '#lib_capt_id'];
         var form_results = ['#form_1_id', '#form_2_id', '#form_3_id', '#form_4_id'];
+        var class_results = [
+            '#1_E_id', '#1_J_id', '#1_M_id', '#1_N_id', '#1_V_id',
+            '#4_E_id', '#4_J_id', '#4_M_id', '#4_N_id', '#4_V_id',
+            '#2_E_id', '#2_J_id', '#2_M_id', '#2_N_id', '#2_V_id',
+            '#3_E_id', '#3_J_id', '#3_M_id', '#3_N_id', '#3_V_id',
+        ];
 
         function fetch_sch_poll_data() {
             $.ajax({
@@ -314,6 +320,20 @@ include_once "resources/templates/footer.php";
                     data = JSON.parse(data);
 
                     form_results.forEach(function(result, i) {
+                        $(result).html(data[i]);
+                    });
+                }
+            })
+        }
+
+        function fetch_class_poll_data() {
+            $.ajax({
+                url: 'fetch/fetch_all_class_lvl.php',
+                type: 'POST',
+                success:function(data) {
+                    data = JSON.parse(data);
+
+                    class_results.forEach(function(result, i) {
                         $(result).html(data[i]);
                     });
                 }
