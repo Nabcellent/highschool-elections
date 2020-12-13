@@ -447,12 +447,48 @@ table.profile-table td input {
 
 
 /*=======   ELECTOMETER   =======*/
+.carousel-inner {
+    height: 32rem;
+    max-height:32rem!important;
+    overflow-y: auto;
+}
 .carousel-indicators {
     bottom: -50px;
+}
+.carousel-indicators li {
+    width: 10rem;
+    height: 1.2rem;
+    margin: 0 3rem;
+    border: none;
+    border-radius: 3rem;
+    text-indent: 0;
+    line-height: 1.3rem;
+    color: #000000;
+    background-color: #ffcca7;
+    transition: all 0.25s ease;
+}
+.carousel-indicators li.active, .carousel-indicators li:hover {
+    width: 11rem;
+    height: 1.3rem;
+    margin: 0 3rem;
+    background-color: #ffcca7;
+    border-radius: 3rem;
 }
 .carousel .bg-dark {
     background-color: rgba(0, 0, 0, .6)!important;
 }
 .carousel .bg-light {
     background-color: rgba(255, 255, 255, .8)!important;
+}
+
+
+
+
+
+/*=======   FOOTER   =======*/
+footer {
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    box-sizing: border-box;
 }

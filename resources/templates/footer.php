@@ -1,12 +1,9 @@
 
-<div class="text-right">
-    <hr class="bg-light">
-    <footer>
-        <div class="text-light">
-            <p class="sign">@Lè_•Çapuchôn✓🩸</p>
-        </div>
-    </footer>
-</div>
+<footer>
+    <div class="text-light text-right">
+        <p class="sign">@Lè_•Çapuchôn✓🩸</p>
+    </div>
+</footer>
 </div>
 
 

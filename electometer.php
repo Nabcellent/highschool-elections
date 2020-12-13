@@ -30,169 +30,9 @@ check_session();
 
         <div class="carousel-inner">
 
-            <!-- Class Prefect Polls -->
+            <!--    School Level Polls    -->
 
             <div class="carousel-item active">
-                <div class="row justify-content-center text-center">
-                    <div class="col-md-6">
-                        <h3 class="text-center">CLASS LEVEL</h3>
-                    </div>
-                </div>
-                <div class="row justify-content-center bg-dark text-light text-center px-4">
-                    <div class="col-md-6 p-2">
-                        <h4>FORM 1 CLASS PREFECT</h4>
-                        <hr class="my-2 bg-light">
-                        <div class="row">
-                            <div class="col-md-6">
-                                <h5>1 EARTH</h5>
-                                <hr class="my-2 mx-auto bg-light w-75">
-                                <div class="text-left" id="1_E_id"></div>
-                            </div>
-                            <div class="col-md-6">
-                                <h5>1 JUPITER</h5>
-                                <hr class="my-2 mx-auto bg-light w-75">
-                                <div class="text-left" id="1_J_id"></div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-6">
-                                <h5>1 MARS</h5>
-                                <hr class="my-2 mx-auto bg-light w-75">
-                                <div class="text-left" id="1_M_id"></div>
-                            </div>
-                            <div class="col-md-6">
-                                <h5>1 NEPTUNE</h5>
-                                <hr class="my-2 mx-auto bg-light w-75">
-                                <div class="text-left" id="1_N_id"></div>
-                            </div>
-                        </div>
-                        <div class="row justify-content-center">
-                            <div class="col-md-6">
-                                <h5>1 VENUS</h5>
-                                <hr class="my-2 mx-auto bg-light w-75">
-                                <div class="text-left" id="1_V_id"></div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!--    Form 2 Class Prefect    -->
-                    <div class="col-md-6 p-2">
-                        <h4>FORM 2 CLASS PREFECT</h4>
-                        <hr class="my-2 bg-light">
-                        <div class="row">
-                            <div class="col-md-6">
-                                <h5>2 EARTH</h5>
-                                <hr class="my-2 mx-auto bg-light w-75">
-                                <div class="text-left" id="2_E_id"></div>
-                            </div>
-                            <div class="col-md-6">
-                                <h5>2 JUPITER</h5>
-                                <hr class="my-2 mx-auto bg-light w-75">
-                                <div class="text-left" id="2_J_id"></div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-6">
-                                <h5>2 MARS</h5>
-                                <hr class="my-2 mx-auto bg-light w-75">
-                                <div class="text-left" id="2_M_id"></div>
-                            </div>
-                            <div class="col-md-6">
-                                <h5>2 NEPTUNE</h5>
-                                <hr class="my-2 mx-auto bg-light w-75">
-                                <div class="text-left" id="2_N_id"></div>
-                            </div>
-                        </div>
-                        <div class="row justify-content-center">
-                            <div class="col-md-6">
-                                <h5>2 VENUS</h5>
-                                <hr class="my-2 mx-auto bg-light w-75">
-                                <div class="text-left" id="2_V_id"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-
-                <div class="row justify-content-center bg-light text-dark text-center px-4">
-
-                    <!--    Form 3 Class Prefect    -->
-                    <div class="col-md-6 p-2">
-                        <h4>FORM 3 CLASS PREFECT</h4>
-                        <hr class="my-2 bg-dark">
-                        <div class="row">
-                            <div class="col-md-6">
-                                <h5>3 EARTH</h5>
-                                <hr class="my-2 mx-auto bg-dark w-75">
-                                <div class="text-left" id="3_E_id"></div>
-                            </div>
-                            <div class="col-md-6">
-                                <h5>3 JUPITER</h5>
-                                <hr class="my-2 mx-auto bg-dark w-75">
-                                <div class="text-left" id="3_J_id"></div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-6">
-                                <h5>3 MARS</h5>
-                                <hr class="my-2 mx-auto bg-dark w-75">
-                                <div class="text-left" id="3_M_id"></div>
-                            </div>
-                            <div class="col-md-6">
-                                <h5>3 NEPTUNE</h5>
-                                <hr class="my-2 mx-auto bg-dark w-75">
-                                <div class="text-left" id="3_N_id"></div>
-                            </div>
-                        </div>
-                        <div class="row justify-content-center">
-                            <div class="col-md-6">
-                                <h5>3 VENUS</h5>
-                                <hr class="my-2 mx-auto bg-dark w-75">
-                                <div class="text-left" id="3_V_id"></div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!--    Form 4 Class Prefect    -->
-                    <div class="col-md-6 p-2">
-                        <h4>FORM 4 CLASS PREFECT</h4>
-                        <hr class="my-2 bg-dark">
-                        <div class="row">
-                            <div class="col-md-6">
-                                <h5>4 EARTH</h5>
-                                <hr class="my-2 mx-auto bg-dark w-75">
-                                <div class="text-left" id="4_E_id"></div>
-                            </div>
-                            <div class="col-md-6">
-                                <h5>4 JUPITER</h5>
-                                <hr class="my-2 mx-auto bg-dark w-75">
-                                <div class="text-left" id="4_J_id"></div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-6">
-                                <h5>4 MARS</h5>
-                                <hr class="my-2 mx-auto bg-dark w-75">
-                                <div class="text-left" id="4_M_id"></div>
-                            </div>
-                            <div class="col-md-6">
-                                <h5>4 NEPTUNE</h5>
-                                <hr class="my-2 mx-auto bg-dark w-75">
-                                <div class="text-left" id="4_N_id"></div>
-                            </div>
-                        </div>
-                        <div class="row justify-content-center">
-                            <div class="col-md-6">
-                                <h5>4 VENUS</h5>
-                                <hr class="my-2 mx-auto bg-dark w-75">
-                                <div class="text-left" id="4_V_id"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="carousel-item">
                 <div class="row justify-content-center text-center">
                     <div class="col-md-6">
                         <h3 class="text-center text-white">SCHOOL LEVEL</h3>
@@ -232,6 +72,9 @@ check_session();
                     </div>
                 </div>
             </div>
+            <!--    End of School Level Polls    -->
+
+            <!--    Form Level Polls    -->
 
             <div class="carousel-item">
                 <div class="row justify-content-center text-center">
@@ -264,15 +107,179 @@ check_session();
                     </div>
                 </div>
             </div>
+            <!--    End of Form Level Polls    -->
+
+            <!--    Class Prefect Polls    -->
+
+            <div class="carousel-item">
+                <div class="row justify-content-center text-center">
+                    <div class="col-md-6">
+                        <h3 class="text-center">CLASS LEVEL</h3>
+                    </div>
+                </div>
+                <div class="row px-4 mb-4 justify-content-center bg-dark text-light text-center">
+                    <div class="col-md-6 p-2">
+                        <h4>FORM 1 CLASS PREFECT</h4>
+                        <hr class="my-2 bg-light">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <h5>1 EARTH</h5>
+                                <hr class="my-2 mx-auto bg-light w-75">
+                                <div class="text-left" id="1_E_id"></div>
+                            </div>
+                            <div class="col-md-6">
+                                <h5>1 JUPITER</h5>
+                                <hr class="my-2 mx-auto bg-light w-75">
+                                <div class="text-left" id="1_J_id"></div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <h5>1 MARS</h5>
+                                <hr class="my-2 mx-auto bg-light w-75">
+                                <div class="text-left" id="1_M_id"></div>
+                            </div>
+                            <div class="col-md-6">
+                                <h5>1 NEPTUNE</h5>
+                                <hr class="my-2 mx-auto bg-light w-75">
+                                <div class="text-left" id="1_N_id"></div>
+                            </div>
+                        </div>
+                        <div class="row justify-content-center">
+                            <div class="col-md-6">
+                                <h5>1 VENUS</h5>
+                                <hr class="my-2 mx-auto bg-light w-75">
+                                <div class="text-left" id="1_V_id"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--    Form 2 Class Prefect    -->
+                    <div class="col-md-6 bg-light text-dark p-2">
+                        <h4>FORM 2 CLASS PREFECT</h4>
+                        <hr class="my-2 bg-dark">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <h5>2 EARTH</h5>
+                                <hr class="my-2 mx-auto bg-dark w-75">
+                                <div class="text-left" id="2_E_id"></div>
+                            </div>
+                            <div class="col-md-6">
+                                <h5>2 JUPITER</h5>
+                                <hr class="my-2 mx-auto bg-dark w-75">
+                                <div class="text-left" id="2_J_id"></div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <h5>2 MARS</h5>
+                                <hr class="my-2 mx-auto bg-dark w-75">
+                                <div class="text-left" id="2_M_id"></div>
+                            </div>
+                            <div class="col-md-6">
+                                <h5>2 NEPTUNE</h5>
+                                <hr class="my-2 mx-auto bg-dark w-75">
+                                <div class="text-left" id="2_N_id"></div>
+                            </div>
+                        </div>
+                        <div class="row justify-content-center">
+                            <div class="col-md-6">
+                                <h5>2 VENUS</h5>
+                                <hr class="my-2 mx-auto bg-dark w-75">
+                                <div class="text-left" id="2_V_id"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row justify-content-center bg-dark text-dark text-center px-4">
+
+                    <!--    Form 3 Class Prefect    -->
+                    <div class="col-md-6 bg-light p-2">
+                        <h4>FORM 3 CLASS PREFECT</h4>
+                        <hr class="my-2 bg-dark">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <h5>3 EARTH</h5>
+                                <hr class="my-2 mx-auto bg-dark w-75">
+                                <div class="text-left" id="3_E_id"></div>
+                            </div>
+                            <div class="col-md-6">
+                                <h5>3 JUPITER</h5>
+                                <hr class="my-2 mx-auto bg-dark w-75">
+                                <div class="text-left" id="3_J_id"></div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <h5>3 MARS</h5>
+                                <hr class="my-2 mx-auto bg-dark w-75">
+                                <div class="text-left" id="3_M_id"></div>
+                            </div>
+                            <div class="col-md-6">
+                                <h5>3 NEPTUNE</h5>
+                                <hr class="my-2 mx-auto bg-dark w-75">
+                                <div class="text-left" id="3_N_id"></div>
+                            </div>
+                        </div>
+                        <div class="row justify-content-center">
+                            <div class="col-md-6">
+                                <h5>3 VENUS</h5>
+                                <hr class="my-2 mx-auto bg-dark w-75">
+                                <div class="text-left" id="3_V_id"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--    Form 4 Class Prefect    -->
+                    <div class="col-md-6 p-2 text-light">
+                        <h4>FORM 4 CLASS PREFECT</h4>
+                        <hr class="my-2 bg-light">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <h5>4 EARTH</h5>
+                                <hr class="my-2 mx-auto bg-light w-75">
+                                <div class="text-left" id="4_E_id"></div>
+                            </div>
+                            <div class="col-md-6">
+                                <h5>4 JUPITER</h5>
+                                <hr class="my-2 mx-auto bg-light w-75">
+                                <div class="text-left" id="4_J_id"></div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <h5>4 MARS</h5>
+                                <hr class="my-2 mx-auto bg-light w-75">
+                                <div class="text-left" id="4_M_id"></div>
+                            </div>
+                            <div class="col-md-6">
+                                <h5>4 NEPTUNE</h5>
+                                <hr class="my-2 mx-auto bg-light w-75">
+                                <div class="text-left" id="4_N_id"></div>
+                            </div>
+                        </div>
+                        <div class="row justify-content-center">
+                            <div class="col-md-6">
+                                <h5>4 VENUS</h5>
+                                <hr class="my-2 mx-auto bg-light w-75">
+                                <div class="text-left" id="4_V_id"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--    End of Class Level Polls    -->
+
         </div>
         <!-- End Carousel Content -->
 
         <!-- Carousel Indicators -->
 
-        <ol class="carousel-indicators carousel-indicators-numbers mt-5">
-            <li data-target="#carousel" data-slide-to="0" class="active">1</li>
-            <li data-target="#carousel" data-slide-to="1" class="active">2</li>
-            <li data-target="#carousel" data-slide-to="2" class="active">3</li>
+        <ol class="carousel-indicators mt-5 text-center">
+            <li data-target="#carousel" data-slide-to="0" class="active">school level</li>
+            <li data-target="#carousel" data-slide-to="1">form level</li>
+            <li data-target="#carousel" data-slide-to="2">class level</li>
         </ol>
         <!-- End Carousel Indicators -->
     </div>
@@ -285,9 +292,9 @@ include_once "resources/templates/footer.php";
 
 <script>
     $(document).ready(function() {
-        fetch_class_poll_data();
         fetch_sch_poll_data();
         fetch_form_poll_data();
+        fetch_class_poll_data();
 
         var school_results = ['#head_boy_id', '#head_girl_id', '#dh_capt_id', '#games_capt_id', '#lib_capt_id'];
         var form_results = ['#form_1_id', '#form_2_id', '#form_3_id', '#form_4_id'];
