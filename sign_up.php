@@ -1,5 +1,7 @@
 <?php
-include 'header.php';
+$page_title = "Sign-up";
+require_once "resources/templates/header.php";
+
 ?>
 
 <div class="container">
@@ -68,5 +70,5 @@ include 'header.php';
 
 <?php
 
-include_once 'footer.php';
+require_once "resources/templates/footer.php";
 ?>

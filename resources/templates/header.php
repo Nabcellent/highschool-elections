@@ -41,6 +41,7 @@ session_start();
                     echo '<a class="dropdown-item" href="../../positions_crud.php">REGISTER POSITION</a>';
                     echo '<div class="dropdown-divider"></div>';
                     echo '<a class="dropdown-item" href="../../students_crud.php">REGISTER STUDENT</a>';
+                    echo '</div>';
                 }
                 ?>
 
@@ -63,18 +64,28 @@ session_start();
         </ul>
         <?php
         if (isset($_SESSION["userEmail"])) {
-            echo "<ul class='navbar-nav ml-auto'>
-                <li class='nav-item'> <a class='nav-link text-danger' href='../../profile.php'>Hello " . $_SESSION['userFirstName'][0] . ". " . $_SESSION['userLastName'] . "</a> </li>
-                <li class='nav-item'> <a class='nav-link' href='../../includes/logout.inc.php'>LOGOUT</a> </li>
-            </ul>";
+            if($_SESSION["userType"] === "admin") {
+                echo '<ul class="navbar nav ml-auto p-0">';
+                echo '<li class="nav-item dropdown">';
+                echo '<a class="nav-link dropdown-toggle pr-3" data-toggle="dropdown" data-target="#admin_menu" href="#">ADMIN';
+                echo '<span class="caret"></span>';
+                echo '</a>';
+                echo '<div class="dropdown-menu w-50" id="admin_menu">';
+                echo '<a class="dropdown-item" href="../../sign_up.php">SIGN UP</a>';
+                echo '<a class="dropdown-item" href="../../includes/logout.inc.php">LOGOUT</a>';
+                echo '</li>';
+                echo '</ul>';
+            } else {
+                echo "<ul class='navbar-nav ml-auto'>";
+                echo "<li class='nav-item'> <a class='nav-link text-danger' href='../../profile.php'>Hello " . $_SESSION['userFirstName'][0] . ". " . $_SESSION['userLastName'] . "</a> </li>";
+                echo "<li class='nav-item'> <a class='nav-link' href='../../includes/logout.inc.php'>LOGOUT</a> </li>";
+                echo "</ul>";
+            }
         } else {
             echo "<ul class='navbar-nav ml-auto'>
-                <li class='nav-item'> <a class='nav-link' href='../../sign_up.php'>SIGN-UP</a> </li>
                 <li class='nav-item'> <a class='nav-link' href='../../login.php'>LOGIN</a> </li>
             </ul>";
         }
         ?>
     </div>
 </nav>
-
-<div class="wrapper">

@@ -8,21 +8,9 @@ html, body {
     width: 100%;
     font-family: 'Varela Round', sans-serif;
 }
-body hr {
-    margin-bottom: 0;
-}
 .sign {
     margin-bottom: 10px;
     font: italic small-caps 12px/30px Lucida Handwriting, cursive;
-}
-.frm_labels {
-    width: 100%;
-    margin: auto;
-}
-.frm_inputs {
-    width: 100%;
-    height: 1cm;
-    padding: 5px 10px;
 }
 .jumbotron-top {
     padding: 1cm;
@@ -34,12 +22,28 @@ body hr {
     font-size: 10pt;
     color: #f5132d;
 }
-#signup_form, #login_form {
-    width: 75%;
-    padding: 0.5cm 1cm 1cm 1cm;
-    background-color: darkgrey;
+
+
+
+
+
+/*=======  NAVBAR  =======*/
+
+#admin_menu {
+    margin-left: -3rem;
 }
-/*  NOMINATION PAGE */
+
+/*=======  LOGIN/SIGN-UP PAGE  =======*/
+
+#login_row .bg-light {
+    background-color: rgba(255, 255, 255, .6)!important;
+}
+
+
+
+
+/*=======  NOMINATION PAGE  =======*/
+
 .nominate_body .double_paper {
     width: 50%;
     padding: 2%;
