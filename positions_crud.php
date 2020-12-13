@@ -16,13 +16,14 @@ $level = array("School Level", "Form Level", "Class Level");
                     <div class="col-sm-6">
                         <h2><span class="material-icons">settings</span> Manage <b>Positions</b></h2>
                     </div>
-                    <div class="col-sm-6">
-                        <a href="#addPositionModal" class="btn btn-success" data-toggle="modal">
-                            <i class="fas fa-plus-circle"></i>
-                            <span> Add New Position</span></a>
+                    <div class="col-sm-6 text-right">
                         <a href="JavaScript:void(0);" class="btn btn-danger" id="delete_multiple_positions">
                             <i class="fas fa-trash"></i>
-                            <span>Delete Multiple</span>
+                            <span> Delete Multiple</span>
+                        </a>
+                        <a href="#addPositionModal" class="btn btn-success" data-toggle="modal">
+                            <i class="fas fa-plus-circle"></i>
+                            <span> Add New Position</span>
                         </a>
                     </div>
                 </div>
@@ -71,11 +72,11 @@ $level = array("School Level", "Form Level", "Class Level");
                                    data-pos_name="<?= $row["position_name"] ?>"
                                    data-pos_level="<?= $row["position_level"] ?>"
                                    data-pos_eligibility="<?= $row["position_eligibility"] ?>"
-                                   title="Edit"></i>
+                                   title="Edit"></i>
                             </a>
                             <a href="#deletePositionModal" class="delete" data-id="<?= $row["position_id"] ?>"
                                data-toggle="modal">
-                                <i class="fas fa-trash" data-toggle="tooltip" title="Delete"></i>
+                                <i class="fas fa-trash" data-toggle="tooltip" title="Delete"></i>
                             </a>
                         </td>
                     </tr>

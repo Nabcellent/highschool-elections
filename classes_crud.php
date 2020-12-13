@@ -16,14 +16,14 @@ $link = connect_to_db();
                     <div class="col-sm-6">
                         <h2><span class="material-icons">settings</span> Manage <b>Classes</b></h2>
                     </div>
-                    <div class="col-sm-6">
-                        <a href="#addClassModal" class="btn btn-success" data-toggle="modal">
-                            <i class="fas fa-plus-circle"></i>
-                            <span> Add New Class</span>
-                        </a>
+                    <div class="col-sm-6 text-right">
                         <a href="JavaScript:void(0);" class="btn btn-danger" id="delete_multiple_classes">
-                            <i class="fas fa-trash"></i>
-                            <span>Delete Multiple</span>
+                            <i class="fas fa-trash"></i>
+                            <span> Delete Multiple</span>
+                        </a>
+                        <a href="#addClassModal" class="btn btn-success" data-toggle="modal">
+                            <i class="fas fa-plus-circle"></i>
+                            <span> Add New Class</span>
                         </a>
                     </div>
                 </div>
@@ -72,7 +72,7 @@ $link = connect_to_db();
                                    title="Edit"></i>
                             </a>
                             <a href="#deleteClassModal" class="delete" data-id="<?= $row["class_id"] ?>" data-toggle="modal">
-                                <i class="fas fa-trash" data-toggle="tooltip" title="Delete"></i>
+                                <i class="fas fa-trash" data-toggle="tooltip" title="Delete"></i>
                             </a>
                         </td>
                     </tr>

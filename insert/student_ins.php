@@ -36,7 +36,7 @@ if(count($_POST) > 0 && $_POST['type'] == 2) {
     $user_last_name = ucfirst($_POST['last_name']);
     $username = strtolower($user_last_name . $user_first_name);
     $user_class = $_POST['students_class'];
-    $user_gender = $_POST['gender'];
+    $user_gender = $_POST['gender_edit'];
     $user_email = $username . "elec@gmail.com";
 
     $sql = "UPDATE users_tbl SET user_first_name = '$user_first_name', user_last_name = '$user_last_name',

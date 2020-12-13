@@ -9,7 +9,6 @@ check_session();
 ?>
 
 <div class="container">
-    <p id="success"></p>
     <div class="table-wrapper">
         <div class="table-title">
             <div class="row">
@@ -23,7 +22,7 @@ check_session();
                     </a>
                     <a class="btn btn-danger" href="JavaScript:void(0);" id="delete_multiple_students">
                         <i class="fas fa-trash"></i>
-                        <span>Delete Multiple</span>
+                        <span> Delete Multiple</span>
                     </a>
                 </div>
             </div>
@@ -192,11 +191,11 @@ check_session();
                     <div class="form-group">
                         <label class="frm_labels"> GENDER : </label>
                         <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" id="gender_edit" name="gender" value="M">
+                            <input class="form-check-input" type="radio" id="male_edit" name="gender_edit" value="M">
                             <label class="form-check-label" for="male">Male</label>
                         </div>
                         <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" id="gender_edit" name="gender" value="F">
+                            <input class="form-check-input" type="radio" id="female_edit" name="gender_edit" value="F">
                             <label class="form-check-label" for="female">Female</label>
                         </div>
                     </div>

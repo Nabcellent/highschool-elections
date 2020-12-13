@@ -110,6 +110,8 @@ $(document).on("click", "#delete_multiple_positions", function() {
 /*  STUDENTS CRUD FORM FUNCTIONS    */
 $(document).on('click', '#btn-add-student', function (e) {
     var data = $('#students_form').serialize();
+    console.log(data);
+
     $.ajax({
         data: data,
         type: 'POST',
@@ -139,19 +141,19 @@ $(document).on('click', '.update-student', function (e) {
     $('#first_name_edit').val(stu_first_name);
     $('#last_name_edit').val(stu_last_name);
     $('#students_class_edit').val(stu_class);
-    $('#gender_edit').val(stu_gender);
 });
 
 $(document).on('click', '#update-student', function(e) {
     var data = $('#update_students_form').serialize();
+    console.log(data);
 
     $.ajax({
-        url: 'insert/student_ins.php',
-        type: 'POST',
         data: data,
+        type: 'POST',
+        url: 'insert/student_ins.php',
 
         success: function(dataResult) {
-            var dataResult = JSON.parse(dataResult);
+            dataResult = JSON.parse(dataResult);
 
             if(dataResult.statusCode === 200) {
                 $('#editStudentModal').modal('hide');
