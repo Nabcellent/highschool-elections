@@ -4,6 +4,7 @@ $(document).ready(function () {
     $('input:radio[name="position_id"]').unbind('change').change(function() {
         var position = $('[name="position_id"]:checked').val();
         var form_number = $('#form_number').val();
+        var nominator_id = $('#nominator_id').val();
 
         if(position == "8") {
             var nominee_class = $('#nominator_class').val();
@@ -16,7 +17,8 @@ $(document).ready(function () {
                 $.ajax({
                     url: "../fetch/fetch_nominees.php",
                     data: {
-                        position: position,
+                        nominator_id:nominator_id,
+                        position:position,
                         form_number:form_number,
                         nominee_class:nominee_class
                     },
@@ -44,6 +46,7 @@ $(document).ready(function () {
                     $.ajax({
                         url: "../fetch/fetch_nominees.php",
                         data: {
+                            nominator_id:nominator_id,
                             position: position,
                             form_number:form_number,
                             nominee_class:nominee_class
