@@ -15,14 +15,14 @@ check_session();
                 <div class="col-sm-6">
                     <h2><span class="material-icons">settings</span> Manage <b>Students</b></h2>
                 </div>
-                <div class="col-sm-6">
-                    <a class="btn btn-success" href="#addStudentModal" data-toggle="modal">
-                        <i class="fas fa-plus-circle"></i>
-                        <span> Add New Student</span>
-                    </a>
+                <div class="col-sm-6 text-right">
                     <a class="btn btn-danger" href="JavaScript:void(0);" id="delete_multiple_students">
                         <i class="fas fa-trash"></i>
                         <span> Delete Multiple</span>
+                    </a>
+                    <a class="btn btn-success" href="#addStudentModal" data-toggle="modal">
+                        <i class="fas fa-plus-circle"></i>
+                        <span> Add New Student</span>
                     </a>
                 </div>
             </div>
@@ -192,11 +192,11 @@ check_session();
                         <label class="frm_labels"> GENDER : </label>
                         <div class="form-check form-check-inline">
                             <input class="form-check-input" type="radio" id="male_edit" name="gender_edit" value="M">
-                            <label class="form-check-label" for="male">Male</label>
+                            <label class="form-check-label" for="male_edit">Male</label>
                         </div>
                         <div class="form-check form-check-inline">
                             <input class="form-check-input" type="radio" id="female_edit" name="gender_edit" value="F">
-                            <label class="form-check-label" for="female">Female</label>
+                            <label class="form-check-label" for="female_edit">Female</label>
                         </div>
                     </div>
                 </div>

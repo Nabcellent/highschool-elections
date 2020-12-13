@@ -11,7 +11,19 @@ $(document).ready(function () {
             }
         });
 
-        //  VALIDATE SIGNUP FORM
+        //  LOGIN FORM
+        $('#login_form').validate({
+            rules: {
+                name: {
+                    required: true,
+                },
+                password: {
+                    required: true,
+                }
+            }
+        });
+
+        //  VALIDATE ADMIN SIGNUP FORM
         $('#signup_form').validate({
             rules: {
                 admin_level: "required",
@@ -33,7 +45,10 @@ $(document).ready(function () {
                         type: "POST"
                     }
                 },
-                password: "required",
+                password: {
+                    required: true,
+                    minlength: 3
+                },
                 password_confirm:{
                     required: true,
                     equalTo: "#password"
@@ -52,11 +67,71 @@ $(document).ready(function () {
                 signup_email: {
                     remote: "Email already in use!"
                 },
+                password: {
+                    minlength: 'Password must be at least 4 characters!',
+                },
                 password_confirm: {
                     equalTo: 'Your passwords do not match!'
                 }
             }
-        })
+        });
+
+
+        //  VALIDATE STUDENT SIGNUP FORM
+        $('#student_sign_up_form').validate({
+            rules: {
+                admin_level: "required",
+                first_name: {
+                    required: true,
+                    minlength: 3,
+                    lettersonly: true
+                },
+                last_name: {
+                    required: true,
+                    minlength: 3,
+                    lettersonly: true
+                },
+                signup_email: {
+                    required: true,
+                    email: true,
+                    remote: {
+                        url: "exists.php",
+                        type: "POST"
+                    }
+                },
+                password: {
+                    required: true,
+                    minlength: 3
+                },
+                password_confirm:{
+                    required: true,
+                    equalTo: "#password"
+                }
+            },
+            messages: {
+                admin_level: '<em>Admin level</em> is required.',
+                first_name: {
+                    required: '<em>First name</em> is Required.',
+                    minlength: '<em>First name</em> MUST have at least 3 characters.',
+                },
+                last_name: {
+                    required: '<em>Last name</em> is required.',
+                    minlength: '<em>Last name</em> MUST have at least 3 characters.',
+                },
+                signup_email: {
+                    remote: "Email already in use!"
+                },
+                password: {
+                    minlength: 'Password must be at least 4 characters!',
+                },
+                password_confirm: {
+                    equalTo: 'Your passwords do not match!'
+                },
+                submitHandler: function(form) {
+
+                }
+            }
+        });
 
         //  VALIDATE STUDENTS FORMS
         $('#students_form').validate({

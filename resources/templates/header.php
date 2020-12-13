@@ -77,12 +77,13 @@ session_start();
                 echo '</ul>';
             } else {
                 echo "<ul class='navbar-nav ml-auto'>";
-                echo "<li class='nav-item'> <a class='nav-link text-danger' href='../../profile.php'>Hello " . $_SESSION['userFirstName'][0] . ". " . $_SESSION['userLastName'] . "</a> </li>";
+                echo "<li class='nav-item'> <a class='nav-link text-danger mr-2' href='../../profile.php'>" . $_SESSION['userFirstName'][0] . ". " . $_SESSION['userLastName'] . "</a> </li>";
                 echo "<li class='nav-item'> <a class='nav-link' href='../../includes/logout.inc.php'>LOGOUT</a> </li>";
                 echo "</ul>";
             }
         } else {
             echo "<ul class='navbar-nav ml-auto'>
+                <li class='nav-item'> <a class='nav-link' href='../../student_sign_up.php'>SIGN-UP</a> </li>
                 <li class='nav-item'> <a class='nav-link' href='../../login.php'>LOGIN</a> </li>
             </ul>";
         }
