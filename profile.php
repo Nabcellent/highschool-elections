@@ -1,5 +1,10 @@
 <?php
-include_once "header.php";
+$page_title = "Profile";
+
+require_once "resources/templates/header.php";
+
+check_session();
+
 $link = connect_to_db();
 
 if(isset($_SESSION["userEmail"])) {
@@ -48,7 +53,7 @@ if($_SESSION["userGender"] == "F") {
         </tr>
         </thead>
 
-        <tbody>
+        <tbody class="text-light">
         <tr>
             <td>First Name</td>
             <td colspan="2"><?= $user_first_name ?></td>
@@ -202,4 +207,4 @@ if($_SESSION["userGender"] == "F") {
 </html>
 
 <?php
-include_once "footer.php";
+require_once "resources/templates/footer.php";

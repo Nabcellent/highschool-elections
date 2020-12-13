@@ -4,9 +4,9 @@ require_once "resources/templates/header.php";
 
 ?>
 
-    <div class="container h-75">
+    <div class="container">
         <div class="row h-100 justify-content-center" id="sign_up_row">
-            <form class="col-9 my-auto p-4 rounded bg-light" id="student_sign_up_form" action="includes/sign_up.inc.php" method="post">
+            <form class="col-9 mt-4 p-4 rounded bg-light" id="student_sign_up_form">
                 <div class="row">
                     <div class="col-md-4">
                         <h3 class="font-weight-bold">SIGN UP</h3>
@@ -36,26 +36,50 @@ require_once "resources/templates/header.php";
                         </div>
                         <div class="form-group col-md-6">
                             <label for="last_name">Last Name :</label>
-                            <input class="form-control" type="text" id="first_name" name="last_name" placeholder="Enter Last Name *">
+                            <input class="form-control" type="text" id="last_name" name="last_name" placeholder="Enter Last Name *">
                         </div>
                     </div>
                 </div>
                 <div class="col-md-12 form-group">
+                    <label for="students_class"> CLASS :</label>
+                    <select class="form-control" id="students_class" name="students_class">
+                        <option value="" hidden>Select a class you want to be in *</option>
+                        <?php
+                        $classes = get_student_sign_up_class();
+
+                        foreach ($classes as $row) {
+                            echo "<option value = '$row[0]'>$row[1] &nbsp; $row[2]</option>";
+                        }
+                        ?>
+                    </select>
+                </div>
+                <div class="col-md-12 form-group">
                     <label for="signup_email">Email :</label>
-                    <input class="form-control" type="email" id="signup_email" name="signup_email" placeholder="Enter your Email">
+                    <input class="form-control" type="email" id="signup_email" name="signup_email" placeholder="Enter your Email *">
                     <span id="availability"></span>
                 </div>
                 <div class="col-md-12 form-group">
                     <label for="password">Password :</label>
-                    <input class="form-control" type="password" id="password" name="password" placeholder="Enter your Password">
+                    <input class="form-control" type="password" id="password" name="password" placeholder="Enter your Password *">
                 </div>
                 <div class="col-md-12 form-group">
                     <label for="password_confirm">Confirm Password :</label>
-                    <input class="form-control" type="password" id="password_confirm" name="password_confirm" placeholder="Confirm your Password">
+                    <input class="form-control" type="password" id="password_confirm" name="password_confirm" placeholder="Confirm your Password *">
+                </div>
+                <div class="col-md-12 form-group">
+                    <label class="frm_labels">GENDER :</label>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" id="male" name="gender" value="M">
+                        <label class="form-check-label" for="male">Male</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" id="female" name="gender" value="F">
+                        <label class="form-check-label" for="female">Female</label>
+                    </div>
                 </div>
                 <div class="row">
                     <div class="col-md-12 text-right">
-                        <input class="btn btn-danger" type="submit" id="btn_save_sign_up" name="submit" value="SIGN UP">
+                        <button class="btn btn-danger" id="btn_student_sign_up">SIGN UP</button>
                     </div>
                 </div>
             </form>

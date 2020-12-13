@@ -78,59 +78,73 @@ $(document).ready(function () {
 
 
         //  VALIDATE STUDENT SIGNUP FORM
-        $('#student_sign_up_form').validate({
-            rules: {
-                admin_level: "required",
-                first_name: {
-                    required: true,
-                    minlength: 3,
-                    lettersonly: true
+        $('#btn_student_sign_up').unbind('click').click(function() {
+            $('#student_sign_up_form').validate({
+                rules: {
+                    admin_level: "required",
+                    first_name: {
+                        required: true,
+                        minlength: 3,
+                        lettersonly: true
+                    },
+                    last_name: {
+                        required: true,
+                        minlength: 3,
+                        lettersonly: true
+                    },
+                    students_class: 'required',
+                    signup_email: {
+                        required: true,
+                        email: true,
+                        remote: {
+                            url: "exists.php",
+                            type: "POST"
+                        }
+                    },
+                    password: {
+                        required: true,
+                        minlength: 4
+                    },
+                    password_confirm: {
+                        required: true,
+                        equalTo: "#password"
+                    },
+                    gender: 'required'
                 },
-                last_name: {
-                    required: true,
-                    minlength: 3,
-                    lettersonly: true
+                messages: {
+                    admin_level: '<em>Admin level</em> is required.',
+                    first_name: {
+                        required: '<em>First name</em> is Required.',
+                        minlength: '<em>First name</em> MUST have at least 3 characters.',
+                    },
+                    last_name: {
+                        required: '<em>Last name</em> is required.',
+                        minlength: '<em>Last name</em> MUST have at least 3 characters.',
+                    },
+                    signup_email: {
+                        remote: "Email already in use!"
+                    },
+                    password: {
+                        minlength: 'Password must be at least 4 characters!',
+                    },
+                    password_confirm: {
+                        equalTo: 'Your passwords do not match!'
+                    },
                 },
-                signup_email: {
-                    required: true,
-                    email: true,
-                    remote: {
-                        url: "exists.php",
-                        type: "POST"
-                    }
-                },
-                password: {
-                    required: true,
-                    minlength: 3
-                },
-                password_confirm:{
-                    required: true,
-                    equalTo: "#password"
-                }
-            },
-            messages: {
-                admin_level: '<em>Admin level</em> is required.',
-                first_name: {
-                    required: '<em>First name</em> is Required.',
-                    minlength: '<em>First name</em> MUST have at least 3 characters.',
-                },
-                last_name: {
-                    required: '<em>Last name</em> is required.',
-                    minlength: '<em>Last name</em> MUST have at least 3 characters.',
-                },
-                signup_email: {
-                    remote: "Email already in use!"
-                },
-                password: {
-                    minlength: 'Password must be at least 4 characters!',
-                },
-                password_confirm: {
-                    equalTo: 'Your passwords do not match!'
-                },
-                submitHandler: function(form) {
+                submitHandler: function (form) {
+                    var data = $("#student_sign_up_form").serialize();
 
+                    $.ajax({
+                        data: data,
+                        type: 'POST',
+                        url: "insert/student_sign_up_ins.php",
+                        success: function (response) {
+                            alert(response);
+                            window.location.href = '../login.php?error=none';
+                        }
+                    });
                 }
-            }
+            });
         });
 
         //  VALIDATE STUDENTS FORMS

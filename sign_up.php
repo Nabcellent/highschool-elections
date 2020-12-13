@@ -6,7 +6,7 @@ require_once "resources/templates/header.php";
 
 <div class="container h-75">
     <div class="row h-100 justify-content-center" id="sign_up_row">
-        <form class="col-9 my-auto p-4 rounded bg-light" id="signup_form" action="includes/sign_up.inc.php" method="post">
+        <form class="col-9 my-auto p-4 rounded bg-light" id="sign_up_form" action="includes/sign_up.inc.php" method="post">
             <div class="row">
                 <div class="col-md-4">
                     <h3 class="font-weight-bold">SIGN UP</h3>
@@ -48,7 +48,7 @@ require_once "resources/templates/header.php";
                 </div>
                 <div class="form-group col-md-6 pr-0">
                     <label for="last_name">Last Name :</label>
-                    <input class="form-control" type="text" id="first_name" name="last_name" placeholder="Enter Last Name *">
+                    <input class="form-control" type="text" id="last_name" name="last_name" placeholder="Enter Last Name *">
                 </div>
             </div>
             <div class="form-group col-lg mx-auto">
