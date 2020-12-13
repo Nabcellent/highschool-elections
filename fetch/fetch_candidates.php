@@ -1,14 +1,32 @@
 <?php
 include_once "../resources/db_config.php";
 
-function get_results($position) {
+function get_results($param, $level) {
     $link = connect_to_db();
 
-    $sql = "SELECT " . $position . ", users_tbl.user_first_name, users_tbl.user_last_name,
-        COUNT(*) AS total
-        FROM vote_tbl
-        INNER JOIN users_tbl ON " . $position . " = users_tbl.user_id
-        GROUP BY " . $position . "";
+    if($level === "school_level") {
+        $sql = "SELECT " . $param . ", users_tbl.user_first_name, users_tbl.user_last_name,
+                COUNT(*) AS total
+                FROM vote_tbl
+                INNER JOIN users_tbl ON " . $param . " = users_tbl.user_id
+                GROUP BY " . $param . "";
+    } else if($level === "form_level") {
+        $sql = "SELECT form_capt_id, users_tbl.user_first_name, users_tbl.user_last_name, users_tbl.user_class, classes_tbl.form_number,
+                COUNT(*) AS total
+                FROM vote_tbl
+                INNER JOIN users_tbl ON form_capt_id = users_tbl.user_id
+                INNER JOIN classes_tbl ON users_tbl.user_class = classes_tbl.class_id
+                WHERE form_number = '$param'
+                GROUP BY form_capt_id";
+    } else if($level === "class_level") {
+        $sql = "SELECT class_prefect_id, users_tbl.user_first_name, users_tbl.user_last_name, classes_tbl.form_number, classes_tbl.stream_name,
+                COUNT(*) AS total
+                FROM vote_tbl
+                INNER JOIN users_tbl ON vote_tbl.class_prefect_id = users_tbl.user_id
+                INNER JOIN classes_tbl ON users_tbl.user_class = classes_tbl.class_id
+                WHERE form_number = 1 AND stream_name = 'venus'
+                GROUP BY class_prefect_id";
+    }
 
     $result = mysqli_query($link, $sql);
 
