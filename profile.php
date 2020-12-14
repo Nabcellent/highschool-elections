@@ -45,11 +45,11 @@ if($_SESSION["userGender"] == "F") {
 </head>
 <body>
 <div class="container mt-lg-5 mb-5">
-    <table class="table table-hover profile-table">
-        <thead class="bg-dark text-light">
-        <tr class="text-primary">
-            <th scope="col"><h3><i class="fas fa-user-edit mr-3"></i><?= $user_first_name . "&nbsp" . $user_last_name . "'s" ?> PROFILE</h3></th>
-            <th class="text-capitalize" scope="col" colspan="2"><h4 class="float-right"><?= $user_type ?></h4></th>
+    <table class="table table-hover table-borderless profile-table">
+        <thead class="bg-dark text-light b">
+        <tr>
+            <th><h3 class="text-primary mt-2"><i class="fas fa-user-edit mr-3"></i><?= $user_first_name . "&nbsp" . $user_last_name . "'s" ?> PROFILE</h3></th>
+            <th class="text-capitalize" scope="col" colspan="2"><h4 class="text-primary float-right mt-2"><?= $user_type ?></h4></th>
         </tr>
         </thead>
 
