@@ -62,6 +62,7 @@ check_session();
                     <td>
                         <span class="custom-checkbox">
                             <input class="student_checkbox" type="checkbox" data-user-id="<?= $student['user_id'] ?>">
+                            <label for=""></label>
                         </span>
                     </td>
                     <td><?= $i ?></td>
