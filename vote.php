@@ -209,9 +209,9 @@ if(isset($_SESSION["userEmail"]) && $_SESSION["userType"] == "student") {
                         <div class="list">
                             <div class="list-menu" id="action">
                                 <a class="dropdown-item" href="electometer.php">Electometer</a>
-                                <a class="dropdown-item" href="index.php" target="_parent">Main page</a>
+                                <a href="contestants.php" class="dropdown-item">Contestants</a>
                                 <div class="dropdown-divider"></div>
-                                <a href="" class="dropdown-item">Other</a>
+                                <a class="dropdown-item" href="index.php" target="_parent">Main page</a>
                             </div>
                         </div>
                     </div>
