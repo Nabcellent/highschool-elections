@@ -251,6 +251,45 @@ table.profile-table td input {
 }
 
 
+/*=======  User Modal styles  =======*/
+
+#editUserModal .modal-dialog {
+    max-width: 50rem;
+}
+#editUserModal .modal-header, .modal .modal-body, .modal .modal-footer {
+    padding: 15px 20px;
+}
+#editUserModal .modal-content {
+    border-radius: 5px;
+}
+#editUserModal .modal-footer {
+    background: #c1c8c8;
+    border-radius: 0 0 5px 5px;
+}
+#editUserModal .modal-title {
+    display: inline-block;
+}
+#editUserModal .form-control {
+    border-radius: 2px;
+    box-shadow: none;
+    border-color: #dddddd;
+}
+#editUserModal textarea.form-control {
+    resize: vertical;
+}
+#editUserModal .btn {
+    border-radius: 2px;
+    min-width: 100px;
+}
+#editUserModal form label {
+    margin-bottom: 0;
+    font-weight: normal;
+}
+.btn-default:hover {
+    background-color: #ffffff;
+}
+
+
 /*=======  Modal styles  =======*/
 
 .modal .modal-dialog {

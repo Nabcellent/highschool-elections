@@ -14,7 +14,7 @@ $level = array("School Level", "Form Level", "Class Level");
             <div class="table-title">
                 <div class="row">
                     <div class="col-sm-6">
-                        <h2><span class="material-icons">settings</span> Manage <b>Positions</b></h2>
+                        <h2><i class="fas fa-cogs"></i> Manage <b>Positions</b></h2>
                     </div>
                     <div class="col-sm-6 text-right">
                         <a href="JavaScript:void(0);" class="btn btn-danger" id="delete_multiple_positions">

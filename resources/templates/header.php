@@ -29,7 +29,7 @@ session_start();
     </button>
     <div class="collapse navbar-collapse" id="nav_menu">
         <ul class="navbar-nav">
-            <li class="nav-item active dropdown">
+            <li class="nav-item dropdown">
 
                 <?php
                 if ((isset($_SESSION["userEmail"]) && $_SESSION["userType"] === "admin") || (isset($_SESSION["userEmail"]) && $_SESSION["userType"] === "standard")) {
@@ -49,6 +49,7 @@ session_start();
 
             <?php
             if ((isset($_SESSION["userEmail"]) && $_SESSION["userType"] === "admin") || (isset($_SESSION["userEmail"]) && $_SESSION["userType"] === "standard")) {
+                echo '<li class="nav-item"> <a class="nav-link" href="../../users_crud.php">USERS</a> </li>';
                 echo '<li class="nav-item"> <a class="nav-link" href="../../students.php">STUDENTS</a> </li>';
                 echo '<li class="nav-item"> <a class="nav-link" href="../../nomination_form.php">NOMINATE</a> </li>';
                 echo '<li class="nav-item"> <a class="nav-link" href="../../contestants.php">CONTESTANTS</a> </li>';
@@ -68,6 +69,7 @@ session_start();
         if (isset($_SESSION["userEmail"])) {
             if($_SESSION["userType"] === "admin") {
                 echo '<ul class="navbar nav ml-auto p-0">';
+                echo "<li class='nav-item'> <a class='nav-link text-danger mr-2' href='../../profile.php'>" . $_SESSION['userFirstName'][0] . ". " . $_SESSION['userLastName'] . "</a> </li>";
                 echo '<li class="nav-item dropdown">';
                 echo '<a class="nav-link dropdown-toggle pr-3" data-toggle="dropdown" data-target="#admin_menu" href="#">ADMIN';
                 echo '<span class="caret"></span>';

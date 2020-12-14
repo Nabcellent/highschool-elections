@@ -41,7 +41,7 @@ require_once "resources/templates/header.php";
                     </div>
                 </div>
                 <div class="col-md-12 form-group">
-                    <label for="students_class"> CLASS :</label>
+                    <label for="students_class">Class :</label>
                     <select class="form-control" id="students_class" name="students_class">
                         <option value="" hidden>Select a class you want to be in *</option>
                         <?php
@@ -67,7 +67,7 @@ require_once "resources/templates/header.php";
                     <input class="form-control" type="password" id="password_confirm" name="password_confirm" placeholder="Confirm your Password *">
                 </div>
                 <div class="col-md-12 form-group">
-                    <label class="frm_labels">GENDER :</label>
+                    <label class="frm_labels">Gender :</label>
                     <div class="form-check form-check-inline">
                         <input class="form-check-input" type="radio" id="male" name="gender" value="M">
                         <label class="form-check-label" for="male">Male</label>

@@ -147,6 +147,54 @@ $(document).ready(function () {
             });
         });
 
+
+        /*  VALIDATE USER FORMS  */
+        $('#update-user').unbind('click').click(function() {
+            $('#update_user_form').validate({
+                rules: {
+                    user_first_name_e: {
+                        required: true,
+                    },
+                    user_last_name_e: {
+                        required: true,
+                    },
+                    user_class_e: {
+                        required: true,
+                    },
+                    user_email_e: {
+                        required: true,
+                    },
+                    User_gender_e: {
+                        required: true,
+                    }
+                },
+                messages: {
+                    user_first_name_e: 'needed'
+                },
+                submitHandler: function () {
+                    var data = $("#update_user_form").serialize();
+                    console.log(data);
+
+                    $.ajax({
+                        data: data,
+                        type: "POST",
+                        url: "insert/user_ins.php",
+                        success: function (dataResult) {
+                            var dataResult = JSON.parse(dataResult);
+
+                            if (dataResult.statusCode === 200) {
+                                $('#editUserModal').modal('hide');
+                                alert('User Updated Successfully !');
+                                location.reload();
+                            } else if (dataResult.statusCode === 201) {
+                                alert(dataResult);
+                            }
+                        }
+                    });
+                }
+            });
+        });
+
         //  VALIDATE STUDENTS FORMS
         $('#students_form').validate({
             rules: {

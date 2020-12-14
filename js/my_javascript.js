@@ -108,7 +108,35 @@ $(document).ready(function(){
 });
 
 
-/*=======  Enable DataTables  =======*/
+
+/*=======  ENABLE DATATABLES  =======*/
+
+$(document).ready(function() {
+    $('.users_datatable').DataTable( {
+        scrollY: 400,
+        initComplete: function () {
+            this.api().columns().every( function () {
+                var column = this;
+                var select = $('<select><option value=""></option></select>')
+                    .appendTo( $(column.header()).empty() )
+                    .on( 'change', function () {
+                        var val = $.fn.dataTable.util.escapeRegex(
+                            $(this).val()
+                        );
+
+                        column
+                            .search( val ? '^'+val+'$' : '', true, false )
+                            .draw();
+                    } );
+
+                column.data().unique().sort().each( function ( d, j ) {
+                    select.append( '<option value="'+d+'">'+d+'</option>' )
+                } );
+            } );
+        },
+    } );
+});
+
 
 $(document).ready(function() {
     $('.students_datatable').DataTable( {
@@ -146,6 +174,7 @@ $(document).ready(function() {
     } );
 });
 
+
 $(document).ready(function() {
     var students_table = $('#students_table').DataTable({
         destroy: true,
@@ -162,6 +191,8 @@ $(document).ready(function() {
         }
     });
 });
+
+
 
 
 /*=======  VOTING PAGE  =======*/

@@ -14,7 +14,7 @@ $link = connect_to_db();
             <div class="table-title">
                 <div class="row">
                     <div class="col-sm-6">
-                        <h2><span class="material-icons">settings</span> Manage <b>Classes</b></h2>
+                        <h2><i class="fas fa-cogs"></i> Manage <b>Classes</b></h2>
                     </div>
                     <div class="col-sm-6 text-right">
                         <a href="JavaScript:void(0);" class="btn btn-danger" id="delete_multiple_classes">

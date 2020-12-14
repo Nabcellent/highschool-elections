@@ -1,3 +1,21 @@
+/*=======  USER CRUD FORM FUNCTIONS  =======*/
+$(document).on('click','.update-user',function(e) {
+    var user_id = $(this).attr("data-user_id");
+    var user_fname = $(this).attr("data-user_first_name");
+    var user_lname = $(this).attr("data-user_last_name");
+    var user_class = $(this).attr("data-user_class");
+    var user_email = $(this).attr("data-user_email");
+    var user_username = $(this).attr("data-user_username");
+
+    $('#user_id_e').val(user_id);
+    $('#user_first_name_e').val(user_fname);
+    $('#user_last_name_e').val(user_lname);
+    $('#user_class_e').val(user_class);
+    $('#user_email_e').val(user_email);
+    $('#user_username_e').val(user_username);
+});
+
+
 /*  POSITIONS CRUD FORM FUNCTIONS   */
 $(document).on('click','#btn-add',function(e) {
     var data = $("#positions_form").serialize();

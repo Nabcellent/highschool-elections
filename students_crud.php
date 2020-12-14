@@ -13,7 +13,7 @@ check_session();
         <div class="table-title">
             <div class="row">
                 <div class="col-sm-6">
-                    <h2><span class="material-icons">settings</span> Manage <b>Students</b></h2>
+                    <h2><i class="fas fa-cogs"></i> Manage <b>Students</b></h2>
                 </div>
                 <div class="col-sm-6 text-right">
                     <a class="btn btn-danger" href="JavaScript:void(0);" id="delete_multiple_students">
@@ -28,7 +28,7 @@ check_session();
             </div>
         </div>
         <table class="table table-striped table-hover" id="students_table">
-            <thead>
+            <thead class="text-light">
             <tr>
                 <th>
                     <span class="custom-checkbox">
