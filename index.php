@@ -30,7 +30,7 @@ $student_stream = $res["stream_name"];
 <input type="number" id="student_id" value="<?= $student_id ?>" hidden>
 <div class="jumbotron text-center">
     <h1>MAIN MENU</h1>
-    <p>Your vote counts! Select your leaders!</p>
+    <p>Your vote counts! Select your leaders for the following! <a href="#view_positions" class="btn btn-dark" data-toggle="modal"> Positions</a></p>
 </div>
 
     <div class="container-fluid">
@@ -135,6 +135,61 @@ $student_stream = $res["stream_name"];
             </div>
         </div>
     </div>
+
+<div id="view_positions" class="modal fade">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <form>
+                <div class="modal-header text-primary">
+                    <h4 class="modal-title">Electoral Positions</h4>
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                </div>
+                <div class="modal-body text-white">
+                    <div class="row">
+                        <div class="col-md-5">
+                            <h5>SCHOOL LEVEL &nbsp;-</h5>
+                        </div>
+                        <div class="col-md-7">
+                            <p>Form 3 Students Only</p>
+                        </div>
+                    </div>
+                    <ol>
+                        <li>Head Boy</li>
+                        <li>Head Girl</li>
+                        <li>Dinning Hall Captain</li>
+                        <li>Games Captain</li>
+                        <li>Library Captain</li>
+                    </ol>
+                    <div class="row">
+                        <div class="col-md-5">
+                            <h5>FORM LEVEL &nbsp;&nbsp;&nbsp;&nbsp; -</h5>
+                        </div>
+                        <div class="col-md-7">
+                            <p>All Students</p>
+                        </div>
+                    </div>
+                    <ol>
+                        <li>Form Captain</li>
+                    </ol>
+                    <div class="row">
+                        <div class="col-md-5">
+                            <h5>CLASS LEVEL &nbsp;&nbsp;&nbsp;&nbsp; -</h5>
+                        </div>
+                        <div class="col-md-7">
+                            <p>All students</p>
+                        </div>
+                    </div>
+                    <ol>
+                        <li>Class Prefect</li>
+                    </ol>
+                </div>
+                <div class="modal-footer">
+                    <input type="button" class="btn btn-default" data-dismiss="modal" value="CLOSE">
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
 
 <?php
 require_once 'resources/templates/footer.php';
