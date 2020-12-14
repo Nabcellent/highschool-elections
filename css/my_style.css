@@ -48,6 +48,16 @@ html, body {
 
 
 
+/*=======  INDEX PAGE  =======*/
+.jumbotron {
+    padding: 2rem 2rem;
+    margin-bottom: .5rem!important;
+}
+.row .text-left {
+
+}
+
+
 
 /*=======  NOMINATION PAGE  =======*/
 
