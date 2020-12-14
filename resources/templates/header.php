@@ -54,12 +54,12 @@ session_start();
                 echo '<li class="nav-item"> <a class="nav-link" href="../../nomination_form.php">NOMINATE</a> </li>';
                 echo '<li class="nav-item"> <a class="nav-link" href="../../contestants.php">CONTESTANTS</a> </li>';
                 echo '<li class="nav-item"> <a class="nav-link" href="../../vote.php" target="_blank">VOTE</a> </li>';
-                echo '<li class="nav-item"> <a class="nav-link" href="../../electometer.php">REPORT</a> </li>';
+                echo '<li class="nav-item"> <a class="nav-link" href="../../electometer.php">ELECTORATE</a> </li>';
             } else if(isset($_SESSION["userEmail"]) && $_SESSION["userType"] === "student"){
                 echo '<li class="nav-item"> <a class="nav-link" href="../../students.php">STUDENTS</a> </li>';
-                echo '<li class="nav-item"> <a class="nav-link" href="../../nomination_form.php">NOMINATE</a> </li>';
-                echo '<li class="nav-item"> <a class="nav-link" href="../../contestants.php">CONTESTANTS</a> </li>';
-                echo '<li class="nav-item"> <a class="nav-link" href="../../vote.php" target="_blank">VOTE</a> </li>';
+                echo '<li class="nav-item"> <a class="nav-link disabled" href="../../nomination_form.php">NOMINATE</a> </li>';
+                echo '<li class="nav-item"> <a class="nav-link disabled" href="../../contestants.php">CONTESTANTS</a> </li>';
+                echo '<li class="nav-item"> <a class="nav-link disabled" href="../../vote.php" target="_blank">VOTE</a> </li>';
             }
 
             ?>
