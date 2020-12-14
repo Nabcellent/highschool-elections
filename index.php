@@ -8,6 +8,7 @@ check_session();
 $link = connect_to_db();
 
 $student_id = $_SESSION["userId"];
+$student_class_id = $_SESSION["userClass"];
 
 $sql = "SELECT users_tbl.*, classes_tbl.form_number, classes_tbl.stream_name
         FROM users_tbl
@@ -25,6 +26,7 @@ $student_form = $res["form_number"];
 $student_stream = $res["stream_name"];
 
 ?>
+<input type="number" id="student_class_id" value="<?= $student_class_id ?>" hidden>
 <input type="number" id="student_id" value="<?= $student_id ?>" hidden>
 <div class="jumbotron text-center">
     <h1>MAIN MENU</h1>
@@ -43,7 +45,7 @@ $student_stream = $res["stream_name"];
                 <div class="row">
                     <div class="col-md-12">
                         <h4>Personal Details</h4>
-                        <hr class="bg-dark">
+                        <hr class="bg-dark mt-0">
                     </div>
                 </div>
                 <div class="row text-left">
@@ -65,7 +67,7 @@ $student_stream = $res["stream_name"];
                 <div class="row">
                     <div class="col-md-12">
                         <h4>Class Details</h4>
-                        <hr class="bg-dark">
+                        <hr class="bg-dark mt-0">
                     </div>
                 </div>
                 <div class="row text-left">
@@ -84,12 +86,10 @@ $student_stream = $res["stream_name"];
                         <p><?= $student_stream ?></p>
                     </div>
                 </div>
-            </div>
-            <div class="col-md-7">
                 <div class="row">
                     <div class="col-md-12">
                         <h4>Your Nominees</h4>
-                        <hr class="bg-light mt-1 w-50">
+                        <hr class="bg-dark mt-0">
                     </div>
                 </div>
                 <div class="row">
@@ -106,8 +106,32 @@ $student_stream = $res["stream_name"];
                         <h5>Nominee Position</h5>
                     </div>
                 </div>
-                <hr class="mt-2 bg-light">
+                <hr class="mt-0 bg-dark">
                 <div id="student_nominees"></div>
+            </div>
+            <div class="col-md-7">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h4>Your Classmates</h4>
+                        <hr class="bg-light mt-1 w-50">
+                    </div>
+                </div>
+                <div class="row text-left">
+                    <div class="col-md-3" style="padding-left: 4rem;">
+                        <h5>First name</h5>
+                    </div>
+                    <div class="col-md-3 pl-4">
+                        <h5>Last name</h5>
+                    </div>
+                    <div class="col-md-3 pl-4">
+                        <h5>Class</h5>
+                    </div>
+                    <div class="col-md-3 pl-3">
+                        <h5>Gender</h5>
+                    </div>
+                </div>
+                <hr class="mt-2 bg-light">
+                <div id="classmates"></div>
             </div>
         </div>
     </div>
@@ -117,23 +141,41 @@ require_once 'resources/templates/footer.php';
 
 ?>
 
+
 <script>
+    $(document).ready( function() {
+        var student_class_id = $('#student_class_id').val();
+        fetch_classmates();
+
+        function fetch_classmates() {
+            $.ajax({
+                data: {
+                    student_class_id:student_class_id
+                },
+                url: 'fetch/fetch_classmates.php',
+                type: 'POST',
+                success:function(data) {
+                    $('#classmates').html(data);
+                }
+            })
+        }
+    });
+
     $(document).ready( function() {
         var student_id = $('#student_id').val();
         fetch_student_nominees();
 
         function fetch_student_nominees() {
-        $.ajax({
-            data: {
-                student_id:student_id
-            },
-            url: 'fetch/fetch_students_nominees.php',
-            type: 'POST',
-            success:function(data) {
-                 $('#student_nominees').html(data);
-            }
-        })
-    }
-
-    })
+            $.ajax({
+                data: {
+                    student_id:student_id
+                },
+                url: 'fetch/fetch_students_nominees.php',
+                type: 'POST',
+                success:function(data) {
+                    $('#student_nominees').html(data);
+                }
+            })
+        }
+    });
 </script>
