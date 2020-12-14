@@ -31,8 +31,8 @@ if(count($_POST) > 0 && $_POST['type'] === "1") {
     mysqli_close($link);
 }
 
-if((count($_POST) > 0) && $_POST['type'] == 2) {
-    $user_id = $_POST['student_id'];
+if((count($_POST) > 0) && $_POST['type'] === "2") {
+    $user_id = $_POST['user_id_d'];
 
     $sql = "DELETE FROM users_tbl WHERE user_id = '$user_id'";
 
@@ -47,7 +47,7 @@ if((count($_POST) > 0) && $_POST['type'] == 2) {
 }
 
 if((count($_POST) > 0) && $_POST['type'] == 3) {
-    $user_id = $_POST['student_id'];
+    $user_id = $_POST['user_id'];
     $sql = "DELETE FROM users_tbl WHERE user_id in ($user_id)";
 
     if (mysqli_query($link, $sql)) {

@@ -40,9 +40,9 @@ while($user = mysqli_fetch_array($res)) {
                    data-user_username='" .  $user['username'] . "'
                    title='Edit'></i>
             </a>
-            <a class='delete' href='#deleteUserModal' data-toggle='modal'
-               data-id='" .  $user['user_id'] . "'>
-                <i class='fas fa-trash delete' data-toggle='tooltip' title='Delete'></i>
+            <a class='delete-user' href='#deleteUserModal' data-toggle='modal'
+               data-id='" . $user['user_id'] . "'>
+                <i class='fas fa-trash' data-toggle='tooltip' title='Delete'></i>
             </a>
             </td>
         </tr>";

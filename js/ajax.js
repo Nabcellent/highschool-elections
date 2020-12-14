@@ -15,6 +15,29 @@ $(document).on('click','.update-user',function(e) {
     $('#user_username_e').val(user_username);
 });
 
+$(document).on("click", ".delete-user", function() {
+    var user_id=$(this).attr("data-id");
+    $('#user_id_d').val(user_id);
+});
+
+$(document).on("click", "#delete-user", function() {
+    var user_id_d = $("#user_id_d").val();
+
+    $.ajax({
+        url: "insert/user_ins.php",
+        type: "POST",
+        cache: false,
+        data:{
+            type:2,
+            user_id_d: user_id_d
+        },
+        success: function(dataResult){
+            $('#deleteUserModal').modal('hide');
+            $("#"+dataResult).remove();
+        }
+    });
+});
+
 
 /*  POSITIONS CRUD FORM FUNCTIONS   */
 $(document).on('click','#btn-add',function(e) {
