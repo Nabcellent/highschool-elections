@@ -47,13 +47,13 @@ if($_SESSION["userGender"] == "F") {
 <div class="container mt-lg-5 mb-5">
     <table class="table table-hover profile-table">
         <thead class="bg-dark text-light">
-        <tr>
+        <tr class="text-primary">
             <th scope="col"><h3><i class="fas fa-user-edit mr-3"></i><?= $user_first_name . "&nbsp" . $user_last_name . "'s" ?> PROFILE</h3></th>
             <th class="text-capitalize" scope="col" colspan="2"><h4 class="float-right"><?= $user_type ?></h4></th>
         </tr>
         </thead>
 
-        <tbody class="text-light">
+        <tbody class="text-dark bg-light">
         <tr>
             <td>First Name</td>
             <td colspan="2"><?= $user_first_name ?></td>
@@ -64,15 +64,15 @@ if($_SESSION["userGender"] == "F") {
         </tr>
         <tr>
             <td>Gender</td>
-            <td><?= $user_gender ?></td>
+            <td colspan="2"><?= $user_gender ?></td>
         </tr>
         <tr>
             <td>Password</td>
             <td><input type="password" value="1234567" disabled></td>
             <td>
                 <a href="#confirmPasswordModal" class="confirm" data-toggle="modal">
-                    <i class="material-icons" data-toggle="tooltip"
-                       title="Edit">edit</i>
+                    <i class="fas fa-edit h3" data-toggle="tooltip"
+                       title="Edit"></i>
                 </a>
             </td>
         </tr>
@@ -81,10 +81,10 @@ if($_SESSION["userGender"] == "F") {
             <td><?= $user_username ?></td>
             <td>
                 <a href="#editUsernameModal" class="edit" data-toggle="modal">
-                    <i class="material-icons update-username" data-toggle="tooltip"
+                    <i class="fas fa-edit h3 update-username" data-toggle="tooltip"
                        data-user_id="<?= $user_id ?>"
                        data-user_username="<?= $user_username ?>"
-                       title="Edit">edit</i>
+                       title="Edit"></i>
                 </a>
             </td>
         </tr>
@@ -93,7 +93,7 @@ if($_SESSION["userGender"] == "F") {
             <td><?= $user_email ?></td>
             <td>
                 <a href="#editEmailModal" class="edit" data-toggle="modal">
-                    <i class="material-icons update-email" data-toggle="tooltip"
+                    <i class="fas fa-edit h3 update-email" data-toggle="tooltip"
                        data-user_id="<?= $user_id ?>"
                        data-user_email="<?= $user_email ?>"
                        title="Edit">edit</i>
