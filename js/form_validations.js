@@ -131,15 +131,14 @@ $(document).ready(function () {
                         equalTo: 'Your passwords do not match!'
                     },
                 },
-                submitHandler: function (form) {
+                submitHandler: function () {
                     var data = $("#student_sign_up_form").serialize();
 
                     $.ajax({
                         data: data,
                         type: 'POST',
                         url: "insert/student_sign_up_ins.php",
-                        success: function (response) {
-                            alert(response);
+                        success: function () {
                             window.location.href = '../login.php?error=none';
                         }
                     });
@@ -180,7 +179,7 @@ $(document).ready(function () {
                         type: "POST",
                         url: "insert/user_ins.php",
                         success: function (dataResult) {
-                            var dataResult = JSON.parse(dataResult);
+                            dataResult = JSON.parse(dataResult);
 
                             if (dataResult.statusCode === 200) {
                                 $('#editUserModal').modal('hide');
@@ -378,7 +377,7 @@ $(document).ready(function () {
                     required: 'Please select your nominee.'
                 }
             },
-            submitHandler: function(form) {
+            submitHandler: function() {
                 var nominator_id = $('#nominator_id').val();
                 var nominator_type = $('[name="nominator_type"]:checked').val();
                 var position_id = $('[name="position_id"]:checked').val();
@@ -399,11 +398,11 @@ $(document).ready(function () {
                     },
                     success:function(data) {
                         alert(data);
-                        if(data == 'Your nomination was successful!' || data == 'You have already nominated a student for this position!' || data == 'You CANNOT nominate the same student for 2 different positions!') {
+                        if(data === 'Your nomination was successful!' || data === 'You have already nominated a student for this position!' || data === 'You CANNOT nominate the same student for 2 different positions!') {
                             location.reload();
-                        } else if(data == 'This student has already been nominated for a different position!') {
+                        } else if(data === 'This student has already been nominated for a different position!') {
                             location.reload();
-                        } else if(data == 'This student already has enough seconders' || data == 'This student already has enough proposers') {
+                        } else if(data === 'This student already has enough seconders' || data === 'This student already has enough proposers') {
                             location.reload();
                         }
                     }
@@ -437,7 +436,7 @@ $(document).ready(function () {
                         equalTo: 'Your passwords do not match!'
                     }
                 },
-                submitHandler: function(form) {
+                submitHandler: function() {
                     var new_pass = $('#new_pass').val();
                     var new_pass_confirm = $('#new_pass_confirm').val();
                     var new_pass_id = $('#new_pass_id').val();
@@ -481,7 +480,7 @@ $(document).ready(function () {
                         remote: 'Username already taken!'
                     },
                 },
-                submitHandler: function(form) {
+                submitHandler: function() {
                     var data = $('#edit_username_form').serialize();
 
                     $.ajax({
@@ -492,7 +491,7 @@ $(document).ready(function () {
                         success: function(data) {
                             alert(data);
 
-                            if(data == 'Username changed successfully!') {
+                            if(data === 'Username changed successfully!') {
                                 $('#editUsernameModal').modal('toggle');
                                 location.reload();
                             }
@@ -520,7 +519,7 @@ $(document).ready(function () {
                         remote: "Email already in use!"
                     }
                 },
-                submitHandler: function(form) {
+                submitHandler: function() {
                     var user_id = $('#email_id').val();
                     var email = $('#new_email').val();
 
@@ -536,7 +535,7 @@ $(document).ready(function () {
                         success: function(data) {
                             alert(data);
 
-                            if(data == 'Email changed successfully!') {
+                            if(data === 'Email changed successfully!') {
                                 $('#editEmailModal').modal('toggle');
                                 location.reload();
                             }
@@ -565,12 +564,12 @@ $(document).ready(function () {
 
                 success: function(response) {
                     alert(response);
-                    if(response == 'You have Voted Successfully!') {
+                    if(response === 'You have Voted Successfully!') {
                         $('.success_note').html('CONGRATULATIONS !!!');
                         $('#success').show();
                         $('#seventh').hide();
                         $('.my_progress').hide();
-                    } else if(response == 'You CANNOT vote twice!') {
+                    } else if(response === 'You CANNOT vote twice!') {
                         $('.success_note').html('#StopKorapsheenn...!');
                         $('#success').show();
                         $('#seventh').hide();

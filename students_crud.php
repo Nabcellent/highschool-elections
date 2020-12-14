@@ -28,7 +28,7 @@ check_session();
             </div>
         </div>
         <table class="table table-striped table-hover" id="students_table">
-            <thead class="text-light">
+            <thead class="text-dark">
             <tr>
                 <th>
                     <span class="custom-checkbox">
@@ -62,7 +62,6 @@ check_session();
                     <td>
                         <span class="custom-checkbox">
                             <input class="student_checkbox" type="checkbox" data-user-id="<?= $student['user_id'] ?>">
-                            <label for=""></label>
                         </span>
                     </td>
                     <td><?= $i ?></td>
@@ -166,17 +165,17 @@ check_session();
                 <div class="modal-body">
                     <div class="form-group">
                         <input class="form-control" type="hidden" id="student_id_edit" name="student_id">
-                        <label for="first_name">FIRST NAME :</label>
+                        <label for="first_name_edit">FIRST NAME :</label>
                         <input class="form-control" type="text" id="first_name_edit" name="first_name"
                                placeholder="Enter First Name *">
                     </div>
                     <div class="form-group">
-                        <label for="last_name">SURNAME :</label>
+                        <label for="last_name_edit">SURNAME :</label>
                         <input class="form-control" type="text" id="last_name_edit" name="last_name"
                                placeholder="Enter Second Name *">
                     </div>
                     <div class="form-group">
-                        <label for="students_class"> CLASS :</label>
+                        <label for="students_class_edit"> CLASS :</label>
                         <select class="form-control" id="students_class_edit" name="students_class">
                             <option value="" hidden>Select class *</option>
                             <?php

@@ -50,15 +50,15 @@ $student_stream = $res["stream_name"];
                 </div>
                 <div class="row text-left">
                     <div class="col-md-5 text-right">
-                        <h5>Student Name :</h5>
+                        <h5>Your Name -</h5>
                     </div>
                     <div class="col-md-7">
-                        <p><?= $res["user_first_name"] . " &nbsp " . $res["user_last_name"] ?></p>
+                        <p class="mb-0"><?= $res["user_first_name"] . " &nbsp " . $res["user_last_name"] ?></p>
                     </div>
                 </div>
                 <div class="row text-left">
                     <div class="col-md-5 text-right">
-                        <h5>Student Gender :</h5>
+                        <h5>Your Gender -</h5>
                     </div>
                     <div class="col-md-7">
                         <p><?= $student_gender ?></p>
@@ -72,15 +72,15 @@ $student_stream = $res["stream_name"];
                 </div>
                 <div class="row text-left">
                     <div class="col-md-5 text-right">
-                        <h5>Student Form :</h5>
+                        <h5>Your Form -</h5>
                     </div>
                     <div class="col-md-7">
-                        <p><?= $student_form ?></p>
+                        <p class="mb-0"><?= $student_form ?></p>
                     </div>
                 </div>
                 <div class="row text-left">
                     <div class="col-md-5 text-right">
-                        <h5>Student Stream :</h5>
+                        <h5>Your Stream -</h5>
                     </div>
                     <div class="col-md-7">
                         <p><?= $student_stream ?></p>
