@@ -53,8 +53,8 @@ html, body {
     padding: 2rem 2rem;
     margin-bottom: .5rem!important;
 }
-.row .text-left {
-
+#student_nominees p, .details_div p{
+    color: #ff6400 !important;
 }
 
 

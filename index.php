@@ -39,7 +39,7 @@ $student_stream = $res["stream_name"];
             </div>
         </div>
         <div class="row justify-content-center py-2 mx-4 bg-dark text-center text-light">
-            <div class="col-md-5 p-2 bg-light text-dark">
+            <div class="col-md-5 p-2 bg-light text-dark details_div">
                 <div class="row">
                     <div class="col-md-12">
                         <h4>Personal Details</h4>
@@ -106,7 +106,7 @@ $student_stream = $res["stream_name"];
                         <h5>Nominee Position</h5>
                     </div>
                 </div>
-                <hr class="bg-light">
+                <hr class="mt-2 bg-light">
                 <div id="student_nominees"></div>
             </div>
         </div>
