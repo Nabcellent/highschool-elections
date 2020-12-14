@@ -29,7 +29,7 @@ session_start();
     </button>
     <div class="collapse navbar-collapse" id="nav_menu">
         <ul class="navbar-nav">
-            <li class="nav-item dropdown">
+            <li class="nav-item active dropdown">
 
                 <?php
                 if ((isset($_SESSION["userEmail"]) && $_SESSION["userType"] === "admin") || (isset($_SESSION["userEmail"]) && $_SESSION["userType"] === "standard")) {
@@ -49,11 +49,13 @@ session_start();
 
             <?php
             if ((isset($_SESSION["userEmail"]) && $_SESSION["userType"] === "admin") || (isset($_SESSION["userEmail"]) && $_SESSION["userType"] === "standard")) {
+                echo '<li class="nav-item"> <a class="nav-link" href="../../students.php">STUDENTS</a> </li>';
                 echo '<li class="nav-item"> <a class="nav-link" href="../../nomination_form.php">NOMINATE</a> </li>';
                 echo '<li class="nav-item"> <a class="nav-link" href="../../contestants.php">CONTESTANTS</a> </li>';
                 echo '<li class="nav-item"> <a class="nav-link" href="../../vote.php" target="_blank">VOTE</a> </li>';
                 echo '<li class="nav-item"> <a class="nav-link" href="../../electometer.php">REPORT</a> </li>';
             } else if(isset($_SESSION["userEmail"]) && $_SESSION["userType"] === "student"){
+                echo '<li class="nav-item"> <a class="nav-link" href="../../students.php">STUDENTS</a> </li>';
                 echo '<li class="nav-item"> <a class="nav-link" href="../../nomination_form.php">NOMINATE</a> </li>';
                 echo '<li class="nav-item"> <a class="nav-link" href="../../contestants.php">CONTESTANTS</a> </li>';
                 echo '<li class="nav-item"> <a class="nav-link" href="../../vote.php" target="_blank">VOTE</a> </li>';

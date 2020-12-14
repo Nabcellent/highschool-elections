@@ -105,28 +105,66 @@ $(document).ready(function(){
             $('.child_div').toggleClass('show');
         });
     });
+});
 
-    //  Enable DataTables
-    $(document).ready(function() {
-        var students_table = $('#students_table').DataTable({
-            destroy: true,
-            aLengthMenu: [[10, 20, 40, -1],[10, 20, 40, 'All']],
-            language: {
-                sSearchPlaceholder: "Search Student"
-            }
-        });
-        var classes_table = $('#classes_table').DataTable({
-            destroy: true,
-            aLengthMenu: [[5, 10, 20, -1],[5, 10, 20, 'All']],
-            language: {
-                sSearchPlaceholder: "Search Class"
-            }
-        });
+
+/*=======  Enable DataTables  =======*/
+
+$(document).ready(function() {
+    $('.students_datatable').DataTable( {
+        "aoColumns": [
+            { "bSortable": false },
+            { "bSortable": false },
+            { "bSortable": false },
+            { "bSortable": false },
+        ],
+        scrollY: 450,
+        scrollCollapse: true,
+        pagingType: 'full_numbers',
+        aLengthMenu: [[10, 20, 40, -1],[10, 20, 40, 'All']],
+        order: [[2, 'asc'], [1, 'asc'], [0, 'asc']],
+        initComplete: function () {
+            this.api().columns().every( function () {
+                var column = this;
+                var select = $('<select><option value=""></option></select>')
+                    .appendTo( $(column.header()).empty() )
+                    .on( 'change', function () {
+                        var val = $.fn.dataTable.util.escapeRegex(
+                            $(this).val()
+                        );
+
+                        column
+                            .search( val ? '^'+val+'$' : '', true, false )
+                            .draw();
+                    } );
+
+                column.data().unique().sort().each( function ( d, j ) {
+                    select.append( '<option value="'+d+'">'+d+'</option>' )
+                } );
+            } );
+        },
+    } );
+});
+
+$(document).ready(function() {
+    var students_table = $('#students_table').DataTable({
+        destroy: true,
+        aLengthMenu: [[10, 20, 40, -1],[10, 20, 40, 'All']],
+        language: {
+            sSearchPlaceholder: "Search Student"
+        }
+    });
+    var classes_table = $('#classes_table').DataTable({
+        destroy: true,
+        aLengthMenu: [[5, 10, 20, -1],[5, 10, 20, 'All']],
+        language: {
+            sSearchPlaceholder: "Search Class"
+        }
     });
 });
 
 
-/*  VOTING PAGE */
+/*=======  VOTING PAGE  =======*/
 
 $(document).ready(function() {
     //  Remove error message
