@@ -26,7 +26,14 @@ function get_classes_details() {
 
 function get_student_sign_up_class() {
     $link = connect_to_db();
-    $sql = "SELECT classes_tbl.* FROM classes_tbl WHERE class_id != 0 ORDER BY form_number, stream_name";
+    $sql = "SELECT classes_tbl.*, users_tbl.user_class,
+            COUNT(user_class)
+            FROM classes_tbl
+            INNER JOIN users_tbl ON classes_tbl.class_id = users_tbl.user_class
+            WHERE class_id != 0
+            GROUP BY class_id
+            HAVING COUNT(user_class) < 10
+            ORDER BY form_number, stream_name";
     $res = mysqli_query($link, $sql);
     $classes_arr = array();
 
