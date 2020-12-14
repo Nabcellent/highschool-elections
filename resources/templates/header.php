@@ -50,7 +50,7 @@ session_start();
             <?php
             if ((isset($_SESSION["userEmail"]) && $_SESSION["userType"] === "admin") || (isset($_SESSION["userEmail"]) && $_SESSION["userType"] === "standard")) {
                 echo '<li class="nav-item"> <a class="nav-link" href="../../users_crud.php">USERS</a> </li>';
-                echo '<li class="nav-item"> <a class="nav-link" href="../../students.php">STUDENTS</a> </li>';
+                echo '<li class="nav-item"> <a class="nav-link" href="../../students_crud.php">STUDENTS</a> </li>';
                 echo '<li class="nav-item"> <a class="nav-link" href="../../nomination_form.php">NOMINATE</a> </li>';
                 echo '<li class="nav-item"> <a class="nav-link" href="../../contestants.php">CONTESTANTS</a> </li>';
                 echo '<li class="nav-item"> <a class="nav-link" href="../../vote.php" target="_blank">VOTE</a> </li>';
