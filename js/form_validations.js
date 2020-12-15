@@ -411,7 +411,7 @@ $(document).ready(function () {
                         } else if(data === 'This student already has enough seconders🙂' || data === 'This student already has a proposer but you may second him/her🙂') {
                             location.reload();
                         } else if(data === 'Your nomination was successful!😎') {
-                            $('.loader').hide(700);
+                            $('.nominate-loader').hide(700);
                         }
                     }
                 })
