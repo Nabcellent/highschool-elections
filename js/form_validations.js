@@ -401,7 +401,7 @@ $(document).ready(function () {
                     },
                     success:function(data) {
                         alert(data);
-                        if(data === 'Your nomination was successful!😎' || data === 'You have already nominated a student for this position!👀' || data === 'You CANNOT nominate the same student for 2 different positions!🧐') {
+                        if(data === 'You have already nominated a student for this position!👀' || data === 'You CANNOT nominate the same student for 2 different positions!🧐') {
                             location.reload();
                         } else if(data === 'This student has already been nominated for a different position!🙂') {
                             location.reload();
@@ -409,6 +409,8 @@ $(document).ready(function () {
                             location.reload();
                         } else if(data === 'This student already has enough seconders🙂' || data === 'This student already has a proposer but you may second him/her🙂') {
                             location.reload();
+                        } else if(data === 'Your nomination was successful!😎') {
+                            $('.loader').hide(700);
                         }
                     }
                 })
