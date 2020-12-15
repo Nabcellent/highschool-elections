@@ -85,12 +85,10 @@ $(document).ready(function () {
                     first_name: {
                         required: true,
                         minlength: 3,
-                        lettersonly: true
                     },
                     last_name: {
                         required: true,
                         minlength: 3,
-                        lettersonly: true
                     },
                     students_class: 'required',
                     signup_email: {
