@@ -138,6 +138,9 @@ $(document).ready(function () {
                         data: data,
                         type: 'POST',
                         url: "insert/student_sign_up_ins.php",
+                        beforeSend:function() {
+                            $('.signup-loader').show();
+                        },
                         success: function () {
                             window.location.href = '../login.php?error=none';
                         }
@@ -397,7 +400,7 @@ $(document).ready(function () {
                         nominee_class: nominee_class
                     },
                     beforeSend:function() {
-                        $('.loader').show();
+                        $('.nominate-loader').show();
                     },
                     success:function(data) {
                         alert(data);

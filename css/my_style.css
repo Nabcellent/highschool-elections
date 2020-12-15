@@ -9,7 +9,10 @@ html, body {
     font-family: 'Varela Round', sans-serif;
 }
 
-.loader {
+.nominate-loader {
+    display: none;
+}
+.signup-loader {
     display: none;
 }
 

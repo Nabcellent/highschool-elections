@@ -82,6 +82,13 @@ require_once "resources/templates/header.php";
                         <button class="btn btn-danger" id="btn_student_sign_up">SIGN UP</button>
                     </div>
                 </div>
+                <div class="row">
+                    <div class="col-md-12 text-right">
+                        <div class="signup-loader mr-2">
+                            <img src="imgs/loader/Infinity-1s-200px.gif" alt="" style="width: 5rem; height: 5rem;">
+                        </div>
+                    </div>
+                </div>
             </form>
         </div>
     </div>
