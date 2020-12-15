@@ -229,13 +229,13 @@ check_session();
                         </div>
                     </div>
                     <div class="row justify-content-center">
-                        <div class="col-md-6">
+                        <div class="col-md-5 bg-dark rounded m-2">
                             <h5>Head Boys</h5>
                             <ol>
                                 <?= get_sch_candidates('head boy') ?>
                             </ol>
                         </div>
-                        <div class="col-md-6">
+                        <div class="col-md-5 bg-dark rounded m-2">
                             <h5>Head Girls</h5>
                             <ol>
                             <?= get_sch_candidates('head girl') ?>
@@ -243,20 +243,19 @@ check_session();
                         </div>
                     </div>
                     <div class="row justify-content-center">
-                        <div class="col-md-4">
+                        <div class="col-md-4 bg-dark rounded m-2">
                             <h5>Dinning Hall Captains</h5>
                             <ol>
                             <?= get_sch_candidates('dining hall captain') ?>
                             </ol>
                         </div>
-                        <div class="col-md-4">
+                        <div class="col-md-4 bg-dark rounded m-2">
                             <h5>Games Captains</h5>
                             <ol>
                             <?= get_sch_candidates('games captain') ?>
                             </ol>
-                            </ol>
                         </div>
-                        <div class="col-md-4">
+                        <div class="col-md-4 bg-dark rounded m-2">
                             <h5>Library Captains</h5>
                             <ol>
                             <?= get_sch_candidates('library captain') ?>
@@ -270,13 +269,13 @@ check_session();
                     </div>
                     <hr class="bg-light mt-0 mb-0">
                     <div class="row justify-content-center">
-                        <div class="col-md-6">
+                        <div class="col-md-5 bg-dark rounded m-2">
                             <h5>Form 1</h5>
                             <ol>
                             <?= get_form_candidates(1) ?>
                             </ol>
                         </div>
-                        <div class="col-md-6">
+                        <div class="col-md-5 bg-dark rounded m-2">
                             <h5>Form 2</h5>
                             <ol>
                             <?= get_form_candidates(2) ?>
@@ -284,13 +283,13 @@ check_session();
                         </div>
                     </div>
                     <div class="row justify-content-center">
-                        <div class="col-md-6">
+                        <div class="col-md-5 bg-dark rounded m-2">
                             <h5>Form 3</h5>
                             <ol>
                             <?= get_form_candidates('3') ?>
                             </ol>
                         </div>
-                        <div class="col-md-6">
+                        <div class="col-md-5 bg-dark rounded m-2">
                             <h5>Form 4</h5>
                             <ol>
                             <?= get_form_candidates('4') ?>
@@ -304,13 +303,13 @@ check_session();
                     </div>
                     <hr class="bg-light mt-0 mb-0">
                     <div class="row justify-content-center">
-                        <div class="col-md-6">
+                        <div class="col-md-5 bg-dark rounded m-2">
                             <h5>Form 1</h5>
                             <ol>
                             <?= get_class_candidates(1) ?>
                             </ol>
                         </div>
-                        <div class="col-md-6">
+                        <div class="col-md-5 bg-dark rounded m-2">
                             <h5>Form 2</h5>
                             <ol>
                             <?= get_class_candidates(2) ?>
@@ -318,13 +317,13 @@ check_session();
                         </div>
                     </div>
                     <div class="row justify-content-center">
-                        <div class="col-md-6">
+                        <div class="col-md-5 bg-dark rounded m-2">
                             <h5>Form 3</h5>
                             <ol>
                             <?= get_class_candidates(3) ?>
                             </ol>
                         </div>
-                        <div class="col-md-6">
+                        <div class="col-md-5 bg-dark rounded m-2">
                             <h5>Form 4</h5>
                             <ol>
                             <?= get_class_candidates(4) ?>
