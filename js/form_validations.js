@@ -396,6 +396,9 @@ $(document).ready(function () {
                         nominator_class:nominator_class,
                         nominee_class: nominee_class
                     },
+                    beforeSend:function() {
+                        $('.loader').show();
+                    },
                     success:function(data) {
                         alert(data);
                         if(data === 'Your nomination was successful!😎' || data === 'You have already nominated a student for this position!👀' || data === 'You CANNOT nominate the same student for 2 different positions!🧐') {

@@ -1,3 +1,4 @@
+
 /*=======  USER CRUD FORM FUNCTIONS  =======*/
 $(document).on('click','.update-user',function(e) {
     var user_id = $(this).attr("data-user_id");

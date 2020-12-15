@@ -92,6 +92,11 @@ if(isset($_SESSION["userEmail"]) && $_SESSION["userType"] == "student") {
                     <div class="form-group row justify-content-end m-auto">
                         <input class="btn btn-danger" type="submit" id="btn_save_nomination_details" value="SAVE">
                     </div>
+                    <div class="form-group row justify-content-end m-auto">
+                        <div class="loader mr-2">
+                            <img src="imgs/loader/Eclipse-1s-200px.gif" alt="" style="width: 2.7rem; height: 2.7rem;">
+                        </div>
+                    </div>
                 </form>
             </div>
         </div>
@@ -144,5 +149,8 @@ if(isset($_SESSION["userEmail"]) && $_SESSION["userType"] == "student") {
 <?php
 require_once 'resources/templates/footer.php';
 
+?>
 
+<script>
+</script>
 

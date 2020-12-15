@@ -8,6 +8,11 @@ html, body {
     width: 100%;
     font-family: 'Varela Round', sans-serif;
 }
+
+.loader {
+    display: none;
+}
+
 .sign {
     margin-bottom: 10px;
     font: italic small-caps 12px/30px Lucida Handwriting, cursive;
