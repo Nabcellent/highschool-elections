@@ -226,7 +226,6 @@ check_session();
                     <div class="row justify-content-center">
                         <div class="col-md-12 bg-light">
                             <h4 class="font-weight-bold text-center">POTENTIAL SCHOOL LEVEL PREFECTS</h4>
-                            <hr class="bg-dark my-1">
                         </div>
                     </div>
                     <div class="row justify-content-center">
@@ -266,7 +265,6 @@ check_session();
                     <div class="row justify-content-center">
                         <div class="col-md-12 bg-light">
                             <h4 class="font-weight-bold text-center">POTENTIAL FORM LEVEL PREFECTS</h4>
-                            <hr class="bg-dark my-1">
                         </div>
                     </div>
                     <hr class="bg-light mt-0 mb-0">
@@ -301,7 +299,6 @@ check_session();
                     <div class="row justify-content-center">
                         <div class="col-md-12 bg-light">
                             <h4 class="font-weight-bold text-center">POTENTIAL CLASS LEVEL PREFECTS</h4>
-                            <hr class="bg-dark my-1">
                         </div>
                     </div>
                     <hr class="bg-light mt-0 mb-0">
