@@ -425,7 +425,7 @@ function get_sch_candidates($position) {
     INNER JOIN positions_tbl ON nominators_tbl.position_id = positions_tbl.position_id
     WHERE position_name = '$position'
     GROUP BY nominee_id
-    HAVING COUNT(nominators_tbl.nominee_id) > 2";
+    HAVING COUNT(nominators_tbl.nominee_id) > 1";
 
     $query = mysqli_query($link, $sql);
 
@@ -455,7 +455,7 @@ function get_form_candidates($form_number) {
     INNER JOIN positions_tbl ON nominators_tbl.position_id = positions_tbl.position_id
     WHERE position_name = 'form captain' AND form_number = '$form_number'
     GROUP BY nominee_id
-    HAVING COUNT(nominators_tbl.nominee_id) > 2";
+    HAVING COUNT(nominators_tbl.nominee_id) > 1";
 
     $query = mysqli_query($link, $sql);
 
