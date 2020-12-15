@@ -27,7 +27,7 @@ if(isset($_SESSION["userEmail"]) && $_SESSION["userType"] == "student") {
 
 <div class="jumbotron jumbotron-top text-center">
     <h1>NOMINATION FORM</h1>
-    <p>Nominate your Leader! under the following <a href="#nomination_instructions" class="btn btn-dark" data-toggle="modal">rules!</a></p>
+    <p>Nominate your Leader! Some <a href="#nomination_instructions" class="btn btn-dark" data-toggle="modal">rules!</a> to follow</p>
 </div>
 
 <div class="container nominate_body">
@@ -104,11 +104,34 @@ if(isset($_SESSION["userEmail"]) && $_SESSION["userType"] == "student") {
             <div class="modal-content">
                 <form>
                     <div class="modal-header text-primary">
-                        <h4 class="modal-title">Nomination Instructions</h4>
+                        <h3 class="modal-title">NOMINATION</h3>
                         <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
                     </div>
                     <div class="modal-body text-white">
-
+                        <div class="row justify-content-center">
+                            <div class="row">
+                                <div class="col-md-12 w-100">
+                                    <h3 class="ml-4">Instructions</h3>
+                                </div>
+                            </div>
+                            <hr class="bg-light">
+                            <div class="row justify-content-center">
+                                <div class="col-md-11">
+                                    <ol>
+                                        <li>Each Class Level nominee can only have one nominator <em><b>(Proposer or seconder)</b></em></li>
+                                        <li>Both School Level and Form Level nominees can have a maximum of one proposer and two seconder.</li>
+                                        <li>You <em><b>cannot</b></em> nominate two different students for the same position🌚</li>
+                                        <li>Like the above, you <em><b>cannot</b></em> nominate the same student for 2 different positions🌚</li>
+                                        <li>A student <em><b>cannot</b></em> be nominated for more than one position.</li>
+                                        <li><b>Finally and most importantly!</b></li>
+                                        <ul>
+                                            <li>School level and Form level nominees require at least one proposer and one seconder, to be eligible for voting.</li>
+                                            <li>Class level nominees require a nominator<em><b>(Proposer or seconder)</b></em>, in order to be eligible for voting.</li>
+                                        </ul>
+                                    </ol>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                     <div class="modal-footer">
                         <input type="button" class="btn btn-default" data-dismiss="modal" value="CLOSE">
