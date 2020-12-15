@@ -1,5 +1,5 @@
 <?php
-$page_title = "Main";
+$page_title = "Main Menu";
 
 require_once 'resources/templates/header.php';
 

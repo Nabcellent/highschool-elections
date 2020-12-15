@@ -2,6 +2,7 @@
 $page_title = "Students";
 require_once 'resources/templates/header.php';
 
+check_session();
 $link = connect_to_db();
 
 $sql = "SELECT users_tbl.user_first_name, users_tbl.user_last_name, users_tbl.user_gender, classes_tbl.form_number, classes_tbl.stream_name

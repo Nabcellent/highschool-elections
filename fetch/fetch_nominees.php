@@ -42,7 +42,7 @@ if (isset($_POST['position'])) {
 
     $res = mysqli_query($link, $student_name_qry);
     if (mysqli_num_rows($res) > 0) {
-        echo "<option hidden>------- Select -------</option>";
+        echo "<option hidden>Nominee's Name *</option>";
         while ($row = mysqli_fetch_array($res)) {
             echo "<option value='" . $row['user_id'] . "'>" . $row['user_first_name'] . " " . $row['user_last_name'] . "</option>";
         }

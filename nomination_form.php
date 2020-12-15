@@ -25,7 +25,7 @@ if(isset($_SESSION["userEmail"]) && $_SESSION["userType"] == "student") {
 
 ?>
 
-<div class="jumbotron jumbotron-top text-center">
+<div class="jumbotron jumbotron-top h-25 text-center">
     <h1>NOMINATION FORM</h1>
     <p>Nominate your Leader! Some <a href="#nomination_instructions" class="btn btn-dark" data-toggle="modal">rules!</a> to follow</p>
 </div>
@@ -59,7 +59,7 @@ if(isset($_SESSION["userEmail"]) && $_SESSION["userType"] == "student") {
                             $position = get_positions_details($user_FormNumber);
 
                             foreach ($position as $row) {
-                                echo "<div class='form-check form-check'>";
+                                echo "<div class='form-check form-check mb-2'>";
                                 echo "<input class='form-check-input' type='radio' name='position_id' value='$row[position_id]'>";
                                 echo "<label class='form-check-label'>$row[position_name]</label><br>";
                                 echo "</div>";
@@ -69,11 +69,11 @@ if(isset($_SESSION["userEmail"]) && $_SESSION["userType"] == "student") {
                         </div>
                     </div>
 
-                    <p style="margin-top: 0; margin-bottom: 5px">Select the student you'd like to nominate</p>
+                    <p style="margin-top: 0; margin-bottom: 5px">Choose the student you'd like to nominate</p>
                     <div class="form-group row mx-auto">
                         <div class="col pl-0" id="select_class_div" hidden>
-                            <select class="frm_inputs" name="select_class" id="select_class" style="width: 5cm" >
-                                <option hidden>------- Select -------</option>
+                            <select class="form-control" name="select_class" id="select_class" style="width: 5cm" >
+                                <option hidden>Nominee's Class *</option>
                                 <?php
                                 $nominee_class = get_nominee_class($user_FormNumber);
                                 foreach ($nominee_class as $class) {
@@ -83,8 +83,8 @@ if(isset($_SESSION["userEmail"]) && $_SESSION["userType"] == "student") {
                             </select>
                         </div>
                         <div class="col p-0">
-                            <select class="frm_inputs" name="select_student" id="select_student" style="width: 5cm" disabled>
-                                <option hidden>------- Select -------</option>
+                            <select class="form-control" name="select_student" id="select_student" style="width: 5cm;" disabled>
+                                <option hidden>Nominee's Name *</option>
                             </select>
                         </div>
                     </div>
@@ -118,7 +118,7 @@ if(isset($_SESSION["userEmail"]) && $_SESSION["userType"] == "student") {
                             <div class="row justify-content-center">
                                 <div class="col-md-11">
                                     <ol>
-                                        <li>Each Class Level nominee can only have one nominator <em><b>(Proposer or seconder)</b></em></li>
+                                        <li>Each Class Level nominee can only have <b>One</b> nominator</li>
                                         <li>Both School Level and Form Level nominees can have a maximum of one proposer and two seconder.</li>
                                         <li>You <em><b>cannot</b></em> nominate two different students for the same position🌚</li>
                                         <li>Like the above, you <em><b>cannot</b></em> nominate the same student for 2 different positions🌚</li>

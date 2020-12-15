@@ -30,7 +30,7 @@ $(document).ready(function () {
                     }
                 });
             } else {
-                $("#select_student").html("<option value=''>------- Select -------</option>");
+                $("#select_student").html("<option value=''>Nominee Name *</option>");
             }
         } else {
             $("#select_class_div").attr("hidden", false);
@@ -59,7 +59,7 @@ $(document).ready(function () {
                         }
                     });
                 } else {
-                    $("#select_student").html("<option value=''>------- Select -------</option>");
+                    $("#select_student").html("<option value=''>Nominee Name *</option>");
                 }
             })
         }

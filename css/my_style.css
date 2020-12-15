@@ -459,6 +459,9 @@ table.profile-table td input {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
+#voting_form > div {
+    transition: all 0.7s ease;
+}
 
 
 /*=======   ELECTOMETER   =======*/
@@ -514,10 +517,24 @@ footer {
     background-color: rgba(0, 0, 0, .8)!important;
 }
 
+
 #nomination_instructions .modal-content{
     background-color: rgba(120, 0, 0, .8)!important;
 }
-
 #nomination_instructions .modal-dialog{
     max-width: 50%!important;
+}
+
+
+#view_candidates .modal-content{
+    background-color: rgba(0, 123, 255, .9)!important;
+}
+#view_candidates .modal-dialog{
+    max-width: 75%!important;
+}
+#view_candidates .text-danger {
+    color: rgba(150, 0, 0, .8)!important;
+}
+#view_candidates .text-light {
+    color: darkgrey!important;
 }
