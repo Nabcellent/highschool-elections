@@ -52,7 +52,7 @@ if(isset($_SESSION["userEmail"]) && $_SESSION["userType"] == "student") {
                 <form action="" method="POST" id="voting_form">
                     <!--    CLASS PREFECT   -->
                     <div id="first">
-                        <h4 class="text-center p-1">Class Prefect</h4>
+                        <h4 class="text-center p-1"><i class="fas fa-vote-yea"></i>Class Prefect</h4>
                         <hr style="margin: 0 0 1cm">
                         <div class="form-group">
                             <input type="number" name="voter_id" value="<?=$voter_id?>" hidden>
@@ -226,6 +226,9 @@ if(isset($_SESSION["userEmail"]) && $_SESSION["userType"] == "student") {
 
 <!--    Bootstrap Bundle    -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+
+<!--    Icons    -->
+<script src="/js/all.min.js" crossorigin="anonymous"></script>
 
 <!--    My scripts and links-->
 <script type="text/javascript" src="js/form_validations.js"></script>
