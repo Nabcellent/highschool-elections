@@ -532,9 +532,18 @@ footer {
 #view_candidates .modal-dialog{
     max-width: 75%!important;
 }
-#view_candidates .text-danger {
-    color: rgba(150, 0, 0, .8)!important;
+#view_candidates .modal-header{
+    padding: 10px 20px;
+    font-size: 16pt;
+    color: rgba(100, 0, 0, .8)!important;
+}
+#view_candidates .modal-header .text-danger {
+
 }
 #view_candidates .text-light {
     color: darkgrey!important;
+}
+#view_candidates h5 {
+    letter-spacing: 1px;
+    font-weight: 600!important;
 }

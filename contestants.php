@@ -225,18 +225,19 @@ check_session();
                 <div class="modal-body text-black">
                     <div class="row justify-content-center">
                         <div class="col-md-12 bg-light">
-                            <h4 class="font-weight-bold text-center">SCHOOL LEVEL</h4>
+                            <h4 class="font-weight-bold text-center">POTENTIAL SCHOOL LEVEL PREFECTS</h4>
+                            <hr class="bg-dark my-1">
                         </div>
                     </div>
                     <div class="row justify-content-center">
                         <div class="col-md-5 bg-dark rounded m-2">
-                            <h5>Head Boys</h5>
+                            <h5 class="font-weight-bold text-white">Head Boys</h5>
                             <ol>
                                 <?= get_sch_candidates('head boy') ?>
                             </ol>
                         </div>
                         <div class="col-md-5 bg-dark rounded m-2">
-                            <h5>Head Girls</h5>
+                            <h5 class="font-weight-bold text-white">Head Girls</h5>
                             <ol>
                             <?= get_sch_candidates('head girl') ?>
                             </ol>
@@ -244,19 +245,19 @@ check_session();
                     </div>
                     <div class="row justify-content-center">
                         <div class="col-md-4 bg-dark rounded m-2">
-                            <h5>Dinning Hall Captains</h5>
+                            <h5 class="font-weight-bold text-white">Dinning Hall Captains</h5>
                             <ol>
                             <?= get_sch_candidates('dining hall captain') ?>
                             </ol>
                         </div>
                         <div class="col-md-4 bg-dark rounded m-2">
-                            <h5>Games Captains</h5>
+                            <h5 class="font-weight-bold text-white">Games Captains</h5>
                             <ol>
                             <?= get_sch_candidates('games captain') ?>
                             </ol>
                         </div>
                         <div class="col-md-4 bg-dark rounded m-2">
-                            <h5>Library Captains</h5>
+                            <h5 class="font-weight-bold text-white">Library Captains</h5>
                             <ol>
                             <?= get_sch_candidates('library captain') ?>
                             </ol>
@@ -264,19 +265,20 @@ check_session();
                     </div>
                     <div class="row justify-content-center">
                         <div class="col-md-12 bg-light">
-                            <h4 class="font-weight-bold text-center">FORM LEVEL</h4>
+                            <h4 class="font-weight-bold text-center">POTENTIAL FORM LEVEL PREFECTS</h4>
+                            <hr class="bg-dark my-1">
                         </div>
                     </div>
                     <hr class="bg-light mt-0 mb-0">
                     <div class="row justify-content-center">
                         <div class="col-md-5 bg-dark rounded m-2">
-                            <h5>Form 1</h5>
+                            <h5 class="font-weight-bold text-white">Form 1</h5>
                             <ol>
                             <?= get_form_candidates(1) ?>
                             </ol>
                         </div>
                         <div class="col-md-5 bg-dark rounded m-2">
-                            <h5>Form 2</h5>
+                            <h5 class="font-weight-bold text-white">Form 2</h5>
                             <ol>
                             <?= get_form_candidates(2) ?>
                             </ol>
@@ -284,13 +286,13 @@ check_session();
                     </div>
                     <div class="row justify-content-center">
                         <div class="col-md-5 bg-dark rounded m-2">
-                            <h5>Form 3</h5>
+                            <h5 class="font-weight-bold text-white">Form 3</h5>
                             <ol>
                             <?= get_form_candidates('3') ?>
                             </ol>
                         </div>
                         <div class="col-md-5 bg-dark rounded m-2">
-                            <h5>Form 4</h5>
+                            <h5 class="font-weight-bold text-white">Form 4</h5>
                             <ol>
                             <?= get_form_candidates('4') ?>
                             </ol>
@@ -298,19 +300,20 @@ check_session();
                     </div>
                     <div class="row justify-content-center">
                         <div class="col-md-12 bg-light">
-                            <h4 class="font-weight-bold text-center">CLASS LEVEL</h4>
+                            <h4 class="font-weight-bold text-center">POTENTIAL CLASS LEVEL PREFECTS</h4>
+                            <hr class="bg-dark my-1">
                         </div>
                     </div>
                     <hr class="bg-light mt-0 mb-0">
                     <div class="row justify-content-center">
                         <div class="col-md-5 bg-dark rounded m-2">
-                            <h5>Form 1</h5>
+                            <h5 class="font-weight-bold text-white">Form 1</h5>
                             <ol>
                             <?= get_class_candidates(1) ?>
                             </ol>
                         </div>
                         <div class="col-md-5 bg-dark rounded m-2">
-                            <h5>Form 2</h5>
+                            <h5 class="font-weight-bold text-white">Form 2</h5>
                             <ol>
                             <?= get_class_candidates(2) ?>
                             </ol>
@@ -318,13 +321,13 @@ check_session();
                     </div>
                     <div class="row justify-content-center">
                         <div class="col-md-5 bg-dark rounded m-2">
-                            <h5>Form 3</h5>
+                            <h5 class="font-weight-bold text-white">Form 3</h5>
                             <ol>
                             <?= get_class_candidates(3) ?>
                             </ol>
                         </div>
                         <div class="col-md-5 bg-dark rounded m-2">
-                            <h5>Form 4</h5>
+                            <h5 class="font-weight-bold text-white">Form 4</h5>
                             <ol>
                             <?= get_class_candidates(4) ?>
                             </ol>
@@ -428,7 +431,7 @@ function get_sch_candidates($position) {
 
     if(mysqli_num_rows($query) > 0) {
         while($row = mysqli_fetch_array($query)) {
-            echo "<li class='mb-0 text-white'>" . $row['user_first_name'] . " " . $row['user_last_name'] . " &nbsp; - &nbsp; " . $row['form_number'] . " " . $row['stream_name'] . "</li>";
+            echo "<li class='mb-0 text-white'><em>" . $row['user_first_name'] . " " . $row['user_last_name'] . " &nbsp; - &nbsp; " . $row['form_number'] . " " . $row['stream_name'] . "</em></li>";
         }
     } else {
         echo "<p class='text-light'>No candidate(s) yet</p>";
@@ -458,7 +461,7 @@ function get_form_candidates($form_number) {
 
     if(mysqli_num_rows($query) > 0) {
         while($row = mysqli_fetch_array($query)) {
-            echo "<li class='mb-0 text-white'>" . $row['user_first_name'] . " " . $row['user_last_name'] . " &nbsp; - &nbsp; " . $row['form_number'] . " " . $row['stream_name'] . "</li>";
+            echo "<li class='mb-0 text-white'><em>" . $row['user_first_name'] . " " . $row['user_last_name'] . " &nbsp; - &nbsp; " . $row['form_number'] . " " . $row['stream_name'] . "</em></li>";
         }
     } else {
         echo "<p class='text-light'>No candidate(s) yet</p>";
@@ -488,7 +491,7 @@ function get_class_candidates($form_number) {
 
     if(mysqli_num_rows($query) > 0) {
         while($row = mysqli_fetch_array($query)) {
-            echo "<li class='mb-0 text-white'>" . $row['user_first_name'] . " " . $row['user_last_name'] . " &nbsp; - &nbsp; " . $row['form_number'] . " " . $row['stream_name'] . "</li>";
+            echo "<li class='mb-0 text-white'><em>" . $row['user_first_name'] . " " . $row['user_last_name'] . " &nbsp; - &nbsp; " . $row['form_number'] . " " . $row['stream_name'] . "</em></li>";
         }
     } else {
         echo "<p class='text-light'>No candidate(s) yet</p>";
