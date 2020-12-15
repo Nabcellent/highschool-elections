@@ -108,43 +108,7 @@ if(isset($_SESSION["userEmail"]) && $_SESSION["userType"] == "student") {
                         <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
                     </div>
                     <div class="modal-body text-white">
-                        <div class="row">
-                            <div class="col-md-5">
-                                <h5>SCHOOL LEVEL &nbsp;-</h5>
-                            </div>
-                            <div class="col-md-7">
-                                <p>Form 3 Students Only</p>
-                            </div>
-                        </div>
-                        <ol>
-                            <li>Head Boy</li>
-                            <li>Head Girl</li>
-                            <li>Dinning Hall Captain</li>
-                            <li>Games Captain</li>
-                            <li>Library Captain</li>
-                        </ol>
-                        <div class="row">
-                            <div class="col-md-5">
-                                <h5>FORM LEVEL &nbsp;&nbsp;&nbsp;&nbsp; -</h5>
-                            </div>
-                            <div class="col-md-7">
-                                <p>All Students</p>
-                            </div>
-                        </div>
-                        <ol>
-                            <li>Form Captain</li>
-                        </ol>
-                        <div class="row">
-                            <div class="col-md-5">
-                                <h5>CLASS LEVEL &nbsp;&nbsp;&nbsp;&nbsp; -</h5>
-                            </div>
-                            <div class="col-md-7">
-                                <p>All students</p>
-                            </div>
-                        </div>
-                        <ol>
-                            <li>Class Prefect</li>
-                        </ol>
+
                     </div>
                     <div class="modal-footer">
                         <input type="button" class="btn btn-default" data-dismiss="modal" value="CLOSE">

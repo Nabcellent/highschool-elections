@@ -508,6 +508,16 @@ footer {
     box-sizing: border-box;
 }
 
+
+
 #view_positions .modal-content{
     background-color: rgba(0, 0, 0, .8)!important;
+}
+
+#nomination_instructions .modal-content{
+    background-color: rgba(0, 0, 0, .8)!important;
+}
+
+#nomination_instructions .modal-dialog{
+    max-width: 50%!important;
 }
