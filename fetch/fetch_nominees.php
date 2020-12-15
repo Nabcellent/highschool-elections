@@ -27,6 +27,11 @@ if (isset($_POST['position'])) {
                 FROM users_tbl
                 INNER JOIN classes_tbl ON users_tbl.user_class = classes_tbl.class_id
                 WHERE user_id != '$nominator_id' AND user_type = 'student' AND user_gender = 'F' AND classes_tbl.class_id = '$nominee_class'";
+    } else if($position_name == "HEAD BOY") {
+        $student_name_qry = "SELECT users_tbl.user_id, users_tbl.user_first_name, users_tbl.user_gender, users_tbl.user_last_name, classes_tbl.form_number, classes_tbl.stream_name
+                FROM users_tbl
+                INNER JOIN classes_tbl ON users_tbl.user_class = classes_tbl.class_id
+                WHERE user_id != '$nominator_id' AND user_type = 'student' AND user_gender = 'M' AND classes_tbl.class_id = '$nominee_class'";
     } else if($position_eligibility == 3) {
         $student_name_qry = "SELECT users_tbl.user_id, users_tbl.user_first_name, users_tbl.user_last_name, classes_tbl.stream_name, classes_tbl.form_number, classes_tbl.class_id
                 FROM users_tbl

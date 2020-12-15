@@ -398,11 +398,13 @@ $(document).ready(function () {
                     },
                     success:function(data) {
                         alert(data);
-                        if(data === 'Your nomination was successful!' || data === 'You have already nominated a student for this position!' || data === 'You CANNOT nominate the same student for 2 different positions!') {
+                        if(data === 'Your nomination was successful!😎' || data === 'You have already nominated a student for this position!👀' || data === 'You CANNOT nominate the same student for 2 different positions!🧐') {
                             location.reload();
-                        } else if(data === 'This student has already been nominated for a different position!') {
+                        } else if(data === 'This student has already been nominated for a different position!🙂') {
                             location.reload();
-                        } else if(data === 'This student already has enough seconders' || data === 'This student already has enough proposers') {
+                        } else if(data === 'This student already has already been nominated, please nominate another🙂🙂') {
+                            location.reload();
+                        } else if(data === 'This student already has enough seconders🙂' || data === 'This student already has a proposer but you may second him/her🙂') {
                             location.reload();
                         }
                     }
@@ -565,12 +567,12 @@ $(document).ready(function () {
                 success: function(response) {
                     alert(response);
                     if(response === 'You have Voted Successfully!') {
-                        $('.success_note').html('CONGRATULATIONS !!!');
+                        $('.success_note').html('🥳 CONGRATULATIONS !!! 💯');
                         $('#success').show();
                         $('#seventh').hide();
                         $('.my_progress').hide();
                     } else if(response === 'You CANNOT vote twice!') {
-                        $('.success_note').html('#StopKorapsheenn...!');
+                        $('.success_note').html('#StopKorapshoonn...‼😤');
                         $('#success').show();
                         $('#seventh').hide();
                         $('.my_progress').hide();

@@ -44,26 +44,24 @@ $count_res = mysqli_fetch_array(mysqli_query($link, $sql_nominators_count));
 
 
 if(mysqli_num_rows($res_Same_pos) > 0) {
-    echo "You have already nominated a student for this position!";
+    echo "You have already nominated a student for this position!👀";
 } else if(mysqli_num_rows($res_same_student) > 0) {
-    echo "You CANNOT nominate the same student for 2 different positions!";
+    echo "You CANNOT nominate the same student for 2 different positions!🧐";
 } else if(mysqli_num_rows($res_diff_pos) > 0) {
-    echo "This student has already been nominated for a different position!";
+    echo "This student has already been nominated for a different position!🙂";
 } else if(isset($count_res["duplicates"])) {
     if($position_id == "8") {
-        if(mysqli_num_rows($res_CP_proposer) > 0 && $nominator_type == "proposer") {
-            echo "This student already has a proposer";
-        } else if($nominator_type == "seconder" && $count_res["duplicates"] == "2") {
-            echo "This student already has enough seconders";
+        if(mysqli_num_rows($res_CP_proposer) > 0) {
+            echo "This student already has already been nominated, please nominate another🙂🙂";
         } else {
             addToDatabase();
         }
-    } else if(mysqli_num_rows($res_form_capt) > 0) {
-        echo "This student already has a seconder from this class";
-    } else if($nominator_type == "proposer" && $count_res["duplicates"] == "2") {
-        echo "This student already has enough proposers";
-    } else if($nominator_type == "seconder" && $count_res["duplicates"] == "5") {
-        echo "This student already has enough seconders";
+    }/* else if(mysqli_num_rows($res_form_capt) > 0) {
+        echo "This student already has a proposer from this class";
+    } */else if($nominator_type === "proposer" && $count_res["duplicates"] == "1") {
+        echo "This student already has a proposer but you may second him/her🙂";
+    } else if($nominator_type === "seconder" && $count_res["duplicates"] == "2") {
+        echo "This student already has enough seconders🙂";
     } else {
         addToDatabase();
     }
@@ -80,7 +78,7 @@ function addToDatabase() {
             VALUES (NULL, '$nominator_id', '$nominee_id', '$nominee_class', '$nominator_type', '$position_id')";
 
         if (mysqli_query($link, $query)) {
-            echo "Your nomination was successful!";
+            echo "Your nomination was successful!😎";
         } else {
             echo "Error: " . $query . "<br>" . mysqli_error($link);
         }

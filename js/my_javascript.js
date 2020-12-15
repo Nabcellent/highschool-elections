@@ -2,11 +2,12 @@ $(document).ready(function () {
 
 //enable dropdown in nomination form
     $('input:radio[name="position_id"]').unbind('change').change(function() {
+        $("#select_class").val();
         var position = $('[name="position_id"]:checked').val();
         var form_number = $('#form_number').val();
         var nominator_id = $('#nominator_id').val();
 
-        if(position == "8") {
+        if(position === "8") {
             var nominee_class = $('#nominator_class').val();
             $("#select_student").attr("disabled", false);
             $("#select_class_div").attr("hidden", true);
@@ -35,7 +36,7 @@ $(document).ready(function () {
             $("#select_class_div").attr("hidden", false);
             $("#select_student").attr("hidden", true);
 
-            $("#select_class").change(function () {
+            $("#select_class").unbind('change').change(function () {
                 var nominee_class = $(this).val();
                 $('#nominee_class').val(nominee_class);
 
