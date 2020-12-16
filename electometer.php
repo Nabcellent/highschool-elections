@@ -24,7 +24,7 @@ check_session();
 
     <!--    Polls    -->
 
-    <div class="carousel slide" id="carousel" data-ride="carousel" data-interval="30000">
+    <div class="carousel slide" id="carousel" data-ride="carousel" data-interval="20000">
 
         <!-- Carousel Content -->
 
@@ -296,7 +296,7 @@ include_once "resources/templates/footer.php";
             fetch_sch_poll_data();
             fetch_form_poll_data();
             fetch_class_poll_data();
-        }, 20000);
+        }, 7000);
 
         var school_results = ['#head_boy_id', '#head_girl_id', '#dh_capt_id', '#games_capt_id', '#lib_capt_id'];
         var form_results = ['#form_1_id', '#form_2_id', '#form_3_id', '#form_4_id'];
