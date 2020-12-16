@@ -408,8 +408,6 @@ $(document).ready(function () {
                             location.reload();
                         } else if(data === 'This student already has already been nominated, please nominate another🙂🙂') {
                             location.reload();
-                        } else if(data === 'This student already has enough seconders🙂' || data === 'This student already has a proposer but you may second him/her🙂') {
-                            location.reload();
                         }
                         $('.nominate-loader').hide(700);
                     }
@@ -569,6 +567,9 @@ $(document).ready(function () {
                 method: 'POST',
                 data: data,
 
+                beforeSend:function() {
+                    $('.vote-loader').show();
+                },
                 success: function(response) {
                     alert(response);
                     if(response === 'You have Voted Successfully!') {
@@ -582,6 +583,7 @@ $(document).ready(function () {
                         $('#seventh').hide();
                         $('.my_progress').hide();
                     }
+                    $('.vote-loader').hide(700);
                 }
             })
         }

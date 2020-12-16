@@ -9,7 +9,7 @@ if(isset($_SESSION["userEmail"])) {
     $student_class = $_SESSION["userClass"];
     $voter_id = $_SESSION["userId"];
 }
-if(isset($_SESSION["userEmail"]) && $_SESSION["userType"] == "student") {
+if(isset($_SESSION["userEmail"]) && $_SESSION["userType"] === "student") {
     $link = connect_to_db();
     $result = mysqli_fetch_array(mysqli_query($link, "SELECT * FROM classes_tbl WHERE class_id = '$student_class'"));
     $user_FormNumber = $result['form_number'];
@@ -56,7 +56,7 @@ if(isset($_SESSION["userEmail"]) && $_SESSION["userType"] == "student") {
                         <hr style="margin: 0 0 1cm">
                         <div class="form-group">
                             <input type="number" name="voter_id" value="<?=$voter_id?>" hidden>
-                            <label class="vote-label" for="student_name">Vote for your Class Prefect</label>
+                            <label class="vote-label" for="voter_id">Vote for your Class Prefect</label>
                             <?php
                             foreach(get_class_lvl_candidates($student_class) as $candidate) {
                                 echo "<div class='form-check'>";
@@ -130,7 +130,7 @@ if(isset($_SESSION["userEmail"]) && $_SESSION["userType"] == "student") {
                                 echo "</div>";
                             }
                             ?>
-                            <b class="form-text text-danger" id="games_capt-err"></b>
+                            <b class="form-text has-error" id="games_capt-err"></b>
                         </div>
                         <div class="form-group">
                             <a href="#" class="btn btn-danger" id="prev-4">Previous</a>
@@ -201,6 +201,7 @@ if(isset($_SESSION["userEmail"]) && $_SESSION["userType"] == "student") {
                         <div class="form-group">
                             <a href="#" class="btn btn-danger" id="prev-7">Previous</a>
                             <input class="btn btn-success" type="submit" id="submit" name="submit" value="Submit">
+                            <img class="vote-loader" src="imgs/loader/Ripple-1s-200px.gif" alt="" style="width: 3rem; height: 3rem;">
                         </div>
                     </div>
                     <div id="success">

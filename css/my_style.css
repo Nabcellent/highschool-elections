@@ -15,6 +15,9 @@ html, body {
 .signup-loader {
     display: none;
 }
+.vote-loader {
+    display: none;
+}
 
 .sign {
     margin-bottom: 10px;
@@ -121,9 +124,6 @@ html, body {
 }
 table.table tr th{
     width: auto;
-    border-left: 1px solid #435d7d;
-    border-right: 1px solid #435d7d;
-    border-color: #e9e9e9;
     padding: 5px 10px;
     vertical-align: middle;
     border-bottom: 1px solid;
@@ -246,7 +246,6 @@ table.profile-table td input {
     height: 11px;
     border: solid #000;
     border-width: 0 3px 3px 0;
-    transform: inherit;
     z-index: 3;
     transform: rotateZ(45deg);
 }
