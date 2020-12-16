@@ -402,13 +402,7 @@ $(document).ready(function () {
                     },
                     success:function(data) {
                         alert(data);
-                        if(data === 'You have already nominated a student for this position!👀' || data === 'You CANNOT nominate the same student for 2 different positions!🧐') {
-                            location.reload();
-                        } else if(data === 'This student has already been nominated for a different position!🙂') {
-                            location.reload();
-                        } else if(data === 'This student already has already been nominated, please nominate another🙂🙂') {
-                            location.reload();
-                        }
+
                         $('.nominate-loader').hide(700);
                     }
                 })
