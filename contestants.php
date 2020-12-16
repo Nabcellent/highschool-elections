@@ -476,13 +476,14 @@ function get_class_candidates($form_number) {
        classes_tbl.stream_name,
        positions_tbl.position_name,
     COUNT(nominators_tbl.nominee_id)
-    FROM `nominators_tbl`
+    FROM nominators_tbl
     INNER JOIN users_tbl ON nominators_tbl.nominee_id = users_tbl.user_id
     INNER JOIN classes_tbl ON nominators_tbl.nominee_class_id = classes_tbl.class_id
     INNER JOIN positions_tbl ON nominators_tbl.position_id = positions_tbl.position_id
     WHERE position_name = 'class prefect' AND form_number = '$form_number'
-    GROUP BY form_number, stream_name
-    HAVING COUNT(nominators_tbl.nominee_id) > 0";
+    GROUP BY nominee_id
+    HAVING COUNT(nominators_tbl.nominee_id) > 0
+    ORDER BY form_number, stream_name";
 
     $query = mysqli_query($link, $sql);
 
