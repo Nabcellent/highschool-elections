@@ -52,7 +52,7 @@ if(isset($_SESSION["userEmail"]) && $_SESSION["userType"] == "student") {
                 <form action="" method="POST" id="voting_form">
                     <!--    CLASS PREFECT   -->
                     <div id="first">
-                        <h4 class="text-center p-1"><i class="fas fa-vote-yea"></i>Class Prefect</h4>
+                        <h4 class="text-center p-1"><i class="fas fa-vote-yea"></i> Class Prefect</h4>
                         <hr style="margin: 0 0 1cm">
                         <div class="form-group">
                             <input type="number" name="voter_id" value="<?=$voter_id?>" hidden>
@@ -74,7 +74,7 @@ if(isset($_SESSION["userEmail"]) && $_SESSION["userType"] == "student") {
 
                     <!--    FORM CAPTAIN    -->
                     <div id="second">
-                        <h4 class="text-center p-1">Form Captain</h4>
+                        <h4 class="text-center p-1"><i class="fas fa-vote-yea"></i> Form Captain</h4>
                         <hr style="margin: 0 0 1cm">
                         <div class="form-group">
                             <label class="vote-label" for="student_name">Vote for your Form Captain</label>
@@ -96,7 +96,7 @@ if(isset($_SESSION["userEmail"]) && $_SESSION["userType"] == "student") {
 
                     <!--    LIBRARY CAPTAIN-->
                     <div id="third">
-                        <h4 class="text-center p-1">Library Captain</h4>
+                        <h4 class="text-center p-1"><i class="fas fa-vote-yea"></i> Library Captain</h4>
                         <hr style="margin: 0 0 1cm">
                         <div class="form-group">
                             <label class="vote-label" for="student_name">Vote for your Library Captain</label>
@@ -118,7 +118,7 @@ if(isset($_SESSION["userEmail"]) && $_SESSION["userType"] == "student") {
 
                     <!--    GAMES CAPTAIN   -->
                     <div id="forth">
-                        <h4 class="text-center p-1">Games Captain</h4>
+                        <h4 class="text-center p-1"><i class="fas fa-vote-yea"></i> Games Captain</h4>
                         <hr style="margin: 0 0 1cm">
                         <div class="form-group">
                             <label class="vote-label" for="student_name">Vote for your Games Captain</label>
@@ -140,7 +140,7 @@ if(isset($_SESSION["userEmail"]) && $_SESSION["userType"] == "student") {
 
                     <!--    DINING HALL CAPTAIN -->
                     <div id="fifth">
-                        <h4 class="text-center p-1">Dining Hall Captain</h4>
+                        <h4 class="text-center p-1"><i class="fas fa-vote-yea"></i> Dining Hall Captain</h4>
                         <hr style="margin: 0 0 1cm">
                         <div class="form-group">
                             <label class="vote-label" for="student_name">Vote for your DiningHall Captain</label>
@@ -162,7 +162,7 @@ if(isset($_SESSION["userEmail"]) && $_SESSION["userType"] == "student") {
 
                     <!--    HEAD GIRL   -->
                     <div id="sixth">
-                        <h4 class="text-center p-1">Head Girl</h4>
+                        <h4 class="text-center p-1"><i class="fas fa-vote-yea"></i> Head Girl</h4>
                         <hr style="margin: 0 0 1cm">
                         <div class="form-group">
                             <label class="vote-label" for="student_name">Vote for your Head Girl</label>
@@ -184,7 +184,7 @@ if(isset($_SESSION["userEmail"]) && $_SESSION["userType"] == "student") {
 
                     <!--    HEAD BOY    -->
                     <div id="seventh">
-                        <h4 class="text-center p-1">Head Boy</h4>
+                        <h4 class="text-center p-1"><i class="fas fa-vote-yea"></i> Head Boy</h4>
                         <hr style="margin: 0 0 1cm">
                         <div class="form-group">
                             <label class="vote-label" for="student_name">Vote for your Head Boy</label>

@@ -60,6 +60,7 @@ session_start();
                 echo '<li class="nav-item"> <a class="nav-link" href="../../nomination_form.php">NOMINATE</a> </li>';
                 echo '<li class="nav-item"> <a class="nav-link" href="../../contestants.php">CONTESTANTS</a> </li>';
                 echo '<li class="nav-item"> <a class="nav-link disabled" href="../../vote.php" target="_blank">VOTE</a> </li>';
+                echo '<li class="nav-item"> <a class="nav-link disabled" href="../../electometer.php">ELECTOMETER</a> </li>';
             }
 
             ?>
