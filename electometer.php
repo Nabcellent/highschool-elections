@@ -24,7 +24,7 @@ check_session();
 
     <!--    Polls    -->
 
-    <div class="carousel slide" id="carousel" data-ride="carousel" data-interval="906000">
+    <div class="carousel slide" id="carousel" data-ride="carousel" data-interval="10000">
 
         <!-- Carousel Content -->
 
